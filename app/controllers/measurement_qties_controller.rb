@@ -1,2 +1,0 @@
-class MeasurementQtiesController < ApplicationController
-end
