@@ -7,10 +7,7 @@ class RecipesController < ApplicationController
   def show
     recipe = Recipe.find_by(id: params[:id])
     if recipe
-      render json: recipe.to_json(:include => {
-        :ingredients => {:only => [:ingredient_name]}
-        },
-        except: [:created_at, :updated_at])
+      render json: RecipeSerializer.new(recipe).to_serialized_json
     else
       render json: { message: "Recipe Not Found"}
     end
