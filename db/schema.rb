@@ -18,34 +18,19 @@ ActiveRecord::Schema.define(version: 2020_03_03_160743) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "measurement_qties", force: :cascade do |t|
-    t.string "qty_amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "measurement_units", force: :cascade do |t|
-    t.string "measurement_description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "recipe_ingredients", force: :cascade do |t|
     t.integer "recipe_id"
     t.integer "ingredient_id"
-    t.integer "measurement_unit_id"
-    t.integer "measurement_qty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
-    t.index ["measurement_qty_id"], name: "index_recipe_ingredients_on_measurement_qty_id"
-    t.index ["measurement_unit_id"], name: "index_recipe_ingredients_on_measurement_unit_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
     t.string "recipe_name"
-    t.string "recipe_description"
+    t.text "recipe_description"
+    t.text "recipe_direction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
