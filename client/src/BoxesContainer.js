@@ -1,11 +1,17 @@
 import React from 'react'
+import MainHeader from './MainHeader'
+import MainFooter from './MainFooter';
 
 class BoxesContainer extends React.Component {
 
     render() {
         return(
-            <MainHeader />
-            <MainFooter />
+            <React.Fragment>
+                <MainHeader />
+                <MainFooter />
+            </React.Fragment>
         )
     }
 }
+
+export default BoxesContainer;
