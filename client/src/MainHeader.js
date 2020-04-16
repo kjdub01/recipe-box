@@ -1,12 +1,17 @@
 import React from 'react'
+import styles from './App.css'
 
 class MainHeader extends React.Component {
 
     render() {
         return(
-           <div>
-               this is the header
-           </div> 
+            <header className='header'>
+                <div className="container flex container">
+            
+                    <h1>Recipe Box</h1>
+
+                </div>
+           </header> 
         )
     }
 }

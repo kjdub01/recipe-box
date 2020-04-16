@@ -13,16 +13,32 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background-color: #61dafb;
   color: white;
+  padding: 1em;
+  margin-bottom: 1em;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  background-color: #61dafb;
+  color: white;
+  padding: 1em;
+  margin-bottom: 0;
+}
+
 
 .App-link {
   color: #61dafb;
