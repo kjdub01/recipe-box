@@ -3,7 +3,7 @@ import styles from './App.css'
 import TileMain from './TileMain'
 import TileFooter from './TileFooter'
 
-class Tile extends React.Componet {
+class Tile extends React.Component {
 
     render() {
         return (
