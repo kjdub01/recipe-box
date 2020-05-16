@@ -5,22 +5,21 @@ import Tile from './Tile'
 class TileIndex extends React.Component {
 
     render() {
-        const data =this.props.data,
-            titleNodes = data.map( (data) => {
-                return (
-                    <Tile
-                        show={this.props.show}
-                        data={data}
-                    />
-                );
-            });
-        return (
+        const recipes = this.state.recipes.map((recipe) => {
+            return(
+                <div key ={recipe.id}>
+                    <h1>{recipe.recipe_name}</h1>
+                    <p>{recipe.img}</p>
+                </div>
+            );
+        })
+        return(
             <div className='container'>
                 <main className="tile-container">
-                    {titleNodes}
+                    {recipes}
                 </main>
             </div>
-        );    
+        )    
     }
 }
 
