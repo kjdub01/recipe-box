@@ -1,19 +1,16 @@
 import React from 'react'
 import styles from './App.css'
 
-class MainHeader extends React.Component {
+const MainHeader = (props) => {
+    return(
+        <header className='header'>
+            <div className="container flex container">
+    
+            <h1>Recipe Box</h1>
 
-    render() {
-        return(
-            <header className='header'>
-                <div className="container flex container">
-            
-                    <h1>Recipe Box</h1>
-
-                </div>
-           </header> 
-        )
-    }
+            </div>
+        </header>  
+    )
 }
 
-export default MainHeader;
+export default MainHeader; 

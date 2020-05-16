@@ -3,12 +3,11 @@ import logo from './logo.svg';
 import styles from './App.css'
 import  Layout from './Layout.js';
 
-class App extends React.Component {
-  render() {
-    return (
-    <Layout />
-    );
-  }
+const App = (props) => {
+  return(
+    <div>
+      <Layout />
+    </div>
+  )
 }
-
 export default App;
