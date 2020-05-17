@@ -23,8 +23,7 @@ class BoxesContainer extends React.Component {
             <div>
                 <MainHeader />
                 <TileIndex
-                recipes={this.state.recipes}
-                    //data={this.state.recipies}
+                    recipes={this.state.recipes}
                     //show={this.showBox.bind(this)}
                 />
                 <MainFooter />
