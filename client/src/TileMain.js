@@ -3,7 +3,6 @@ import styles from './App.css'
 
 class TileMain extends React.Component {
     render() {
-
         var heroDiv;
         if (this.props.img) {
             heroDiv = <div
@@ -25,10 +24,10 @@ class TileMain extends React.Component {
             >
                 {heroDiv}
                 <header className='tile_header'>
-                    <h2 className="tile_title"> {this.props.title} </h2>
+                    <h2 className="tile_title"> {this.props.recipeName} </h2>
                 </header>
             </main>
-        );
+        ); 
     }
 }
 
