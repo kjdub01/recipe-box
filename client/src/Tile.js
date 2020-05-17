@@ -6,10 +6,23 @@ import TileFooter from './TileFooter'
 class Tile extends React.Component {
 
     render() {
+        const recipes = this.props.recipes,
+            tileNodes = recipes.map((recipe) => {
+            return(
+                <div>
+                    <TileMain
+                    key={recipe.id}
+                    recipeName={recipe.recipe_name}
+                    recipeImg={recipe.img}
+                    />
+               
+                    <TileFooter />
+                </div>
+            );
+        })
         return (
             <div>
-                <TileMain />
-                <TileFooter />
+                {tileNodes}   
             </div>
         )
     }
