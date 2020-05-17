@@ -4,7 +4,7 @@ class TileHeader extends React.Component {
             <header
                 className="tile_header"
             >
-                {this.props.title}
+                {this.props.recipeName}
             </header>
         );
     }

@@ -4,11 +4,11 @@ import styles from './App.css'
 class TileMain extends React.Component {
     render() {
         var heroDiv;
-        if (this.props.img) {
+        if (this.props.recipeImg) {
             heroDiv = <div
                 className="tile_hero"
                 style={{
-                    background: "url(" + this.props.img + ")", 
+                    background: "url(" + this.props.recipeImg + ")", 
                     backgroundSize: "100% auto",
                     backgroundPosition: "center center"	
                 }}
@@ -24,7 +24,7 @@ class TileMain extends React.Component {
             >
                 {heroDiv}
                 <header className='tile_header'>
-                    <h2 className="tile_title"> {this.props.recipeName} </h2>
+                    <h2 className="tile_title">{this.props.recipeName}</h2>
                 </header>
             </main>
         ); 
