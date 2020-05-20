@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './App.css'
+import styles from './App.scss'
 
 class TileMain extends React.Component {
     render() {
@@ -19,9 +19,7 @@ class TileMain extends React.Component {
                 />
         }
         return (
-            <main
-                className='tile_main'
-            >
+            <main className='tile_main'key={this.props.key}>
                 {heroDiv}
                 <header className='tile_header'>
                     <h2 className="tile_title">{this.props.recipeName}</h2>
