@@ -1,0 +1,262 @@
+//Typography
+//
+
+$font-stack: "roboto", "Helvetica Neue", Helvetica, Arial;
+$color-font: 333;
+
+body{ 
+	font: 16px $font-stack;
+	color: $color-font;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+}
+
+ol {
+	padding-left: 1rem;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.header {
+  background-color: #7260b7;
+  color: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  background-color: #3f000f;
+  color: white;
+  padding: 1em;
+  margin-top: 177px;
+  margin-bottom: 0;
+  clear: both;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tile-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+.tile {
+	cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    
+    &:hover {
+      box-shadow: 0 4px 5px 0 rgba(0,0,0,0.16),0 4px 10px 0 rgba(0,0,0,0.12);    	
+    }
+}
+
+ 
+
+@media (min-width: 768px){
+	.tile {	
+    position: relative;
+		float: left;
+		margin-left: 5%;
+		width: 29.99999%;
+    &:nth-of-type(3n + 1){
+			margin-left: 0;
+		}
+	}
+}
+
+.tile_header {
+  background: #7260b7;
+	color: #fff;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+.tile_title {
+	margin: 0;
+}
+.tile_footer {
+	border-top: 1px solid rgba(160,160,160,0.2);
+	padding: .5rem;
+}
+
+.tile_hero {
+	/* important added to override styles set inline*/
+    background-size: 100% auto!important;
+    background-position: center center!important;	
+	background-color: #e6eff1;
+	height: 150px;
+}
+
+button,
+input[type=submit] {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    margin-right: .5rem;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    will-change: opacity, transform;
+    transition: all .3s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    background: #eab200;
+
+    &:hover {
+      background: lighten(#eab200, 5%)
+    }
+}
+
+.btn-icon {
+	margin-right: .5rem;
+}
+
+.btn-primary {
+	color: #fff;
+  background: #eab200;
+
+  &:hover{
+    background: lighten(#eab200, 5% );		
+  }
+}
+
+.btn-warning {
+	color: fff;	
+  background: red;
+  
+  &:hover {
+    background: lighten(red, 5%)
+  }
+}
+
+$container-width: 1200px;
+$grid-breakpoint: 800px;
+$grid-margin: 4%;
+$grid-number: 12;
+
+.row:before,
+.row:after,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.row,
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+.column,
+.column-mobile {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+@media (min-width: 560px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (min-width: $grid-breakpoint) {
+
+  .column {
+    margin-left: $grid-margin;
+  }
+
+  .column:first-of-type {
+    margin-left: 0;
+  } 
+
+  $column-width: ( 100 - ( $grid-margin * $grid-number - 1 ) ) / $grid-number ;
+  $column-numbers: (one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
+
+  @each $column-number in $column-numbers {
+
+    $i: index($column-numbers, $column-number);
+
+    .#{$column-number} { 
+      width: $column-width + ( ($column-width + $grid-margin)  * ( $i - 1 ) ) 
+    }
+
+  }
+
+}
+
+
+
+// Utilities
+/*
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.pull-right {
+	float: right;
+}
+
+.text-color-warning{
+	color: red;
+} */
