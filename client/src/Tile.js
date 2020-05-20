@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './App.css'
+import styles from './App.scss'
 import TileMain from './TileMain'
 import TileFooter from './TileFooter'
 
@@ -9,9 +9,9 @@ class Tile extends React.Component {
         const recipes = this.props.recipes,
             tileNodes = recipes.map((recipe) => {
             return(
-                <div>
+                <div className="tile" key={recipe.id.toString}>
                     <TileMain
-                    key={recipe.id}
+                    
                     recipeName={recipe.recipe_name}
                     recipeImg={recipe.img}
                     />
@@ -21,7 +21,7 @@ class Tile extends React.Component {
             );
         })
         return (
-            <div>
+            <div className="tile-container">
                 {tileNodes}   
             </div>
         )
