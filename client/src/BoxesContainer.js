@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './App.scss'
 import MainHeader from './MainHeader'
 import MainFooter from './MainFooter'
 import TileIndex from './TileIndex';

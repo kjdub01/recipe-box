@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './App.scss'
 import TileMain from './TileMain'
 import TileFooter from './TileFooter'
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './App.scss'
 
 class TileMain extends React.Component {
     render() {
