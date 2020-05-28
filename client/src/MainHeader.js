@@ -1,15 +1,21 @@
 import React from 'react'
 //import styles from './App.scss'
 import AddButton from './AddButton.js'
+import AddRecipe from './AddRecipe.js'
 
 class MainHeader extends React.Component {
+
+    constructor(props) {
+        super(props) 
+        this.state = { isEmptyState: true}
+    }
     
-    toggleHidden() {
-        if (this.state.isHidden ) {
-            this.setState({isHidden: false})
-        } else {
-            this.setState({isHidden: true})
-        }
+    toggleHidden = () => {
+       this.setState({
+           ...this.state,
+           isEmptyState: false,
+           isToggleHidenState: true
+       })
     }
 
     render (){
@@ -17,9 +23,9 @@ class MainHeader extends React.Component {
             <header className='header'>
                 <div className="container flex-container">
                 <h1>Recipe Box</h1>
-                    <AddButton
-                        toggleHidden={this.toggleHidden.bind(this)}
-                    />
+                    {this.state.isEmptyState && <AddButton toggleHidden={this.toggleHidden} />}
+
+                    {this.state.isToggleHidenState && <AddRecipe />}
                 </div>
             </header>  
         );
