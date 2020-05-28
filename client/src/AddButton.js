@@ -1,17 +1,8 @@
 import React from 'react'
 
-class AddButton extends React.Component {
+const AddButton = props => {
 
-    render() {
-        return (
-            <button 
-                className="action pull-right"
-                onClick={this.toggleHidden}
-            >
-            Add Recipe
-            </button>
-        );
-    }
+    return <button className="action pull-right" onClick={props.toggleHidden}>Add Recipe</button>
 }
 
 export default AddButton;
