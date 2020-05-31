@@ -5,7 +5,7 @@ $color-font: 333;
 
 body{ 
 	font: 16px $font-stack;
-	color: $color-font;
+  color: $color-font;
 }
 
 h1, h2, h3 {
@@ -106,7 +106,7 @@ input[type=submit] {
 input[type=text],
 textarea {
 	font: 1rem $font-stack;
-	background-color: #fff;
+	background-color: rgb(233, 226, 226);
 	border: none;
 	border-bottom: 1px solid #9e9e9e;
 	border-radius: 0;
