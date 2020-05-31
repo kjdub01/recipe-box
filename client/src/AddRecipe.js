@@ -1,19 +1,37 @@
 import React from 'react'
 
-const AddRecipe = (props) => {
+class AddRecipe extends React.Component {
 
-    return(
-        <div className="form-bg-overlay">
-            <div className="form-gb">
-                <form className="form">
-                    <i className="zmdi zmdi-close zmdi-hc-2x pull-right"
-                    //onClick = {this.props.toggleHidden} 
-                    />
-                    <h2 className="form_title">Add Recipe</h2>
-                </form>
+    handleClick(e) {
+		const formBg = document.querySelector(".form-bg");
+	    const isClickInside = formBg.contains(e.target);
+
+	    if (!isClickInside) {
+	      //the click was outside the specifiedElement, do something
+	      this.props.toggleHidden();
+	    }
+    };
+    render() {
+
+        let formFields = {}
+        return(
+            <div className="form-bg-overlay">
+                <div className="form-gb">
+                    <form className="form">
+                        <i className="zmdi zmdi-close zmdi-hc-2x pull-right"
+                        onClick = {this.props.toggleHidden} 
+                        />
+                        <h2 className="form_title">Add Recipe</h2>
+                        <input type='text' ref={input => formFields.recipe_name = input} placeholder= 'Enter Recipe Name' />
+                        <textarea ref={input => formFields.recipe_description = input} placeholder= "Enter Recipe Description" />
+                        <textarea ref={input => formFields.recipe_direction = input} placeholder= "Enter Recipe Directions" />
+                        <input type='text' ref={input => formFields.img = input} placeholder= "Enter Recipe Image URL" />
+                        <button>Submit</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 /*
     let formFields = {}
 
