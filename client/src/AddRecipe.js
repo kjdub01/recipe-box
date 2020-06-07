@@ -1,6 +1,4 @@
 import React from 'react'
-import Toggle from './ToggleRPC.js'
-import BoxesContainer from './BoxesContainer.js'
 
 class AddRecipe extends React.Component {
 

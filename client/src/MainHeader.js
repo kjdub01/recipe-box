@@ -1,6 +1,5 @@
 import React from 'react'
 //import styles from './App.scss'
-import AddButton from './AddButton.js'
 import AddRecipe from './AddRecipe.js'
 import Toggle from './ToggleRPC.js'
 
