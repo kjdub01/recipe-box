@@ -1,26 +1,18 @@
 import React from 'react'
+import Toggle from './ToggleRPC.js'
+import BoxesContainer from './BoxesContainer.js'
 
 class AddRecipe extends React.Component {
 
-    handleClick(e) {
-		const formBg = document.querySelector(".form-bg");
-	    const isClickInside = formBg.contains(e.target);
-
-	    if (!isClickInside) {
-	      //the click was outside the specifiedElement, do something
-	      this.props.toggleHidden();
-	    }
-    };
     render() {
 
         let formFields = {}
         return(
+            
             <div className="form-bg-overlay">
-                <div className="form-gb">
+                <div className="form-bg">
                     <form className="form">
-                        <i className="zmdi zmdi-close zmdi-hc-2x pull-right"
-                        onClick = {this.props.toggleHidden} 
-                        />
+                        <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  onClick={this.props.toggle}/> 
                         <h2 className="form_title">Add Recipe</h2>
                         <input type='text' ref={input => formFields.recipe_name = input} placeholder= 'Enter Recipe Name' />
                         <textarea ref={input => formFields.recipe_description = input} placeholder= "Enter Recipe Description" />
@@ -30,6 +22,7 @@ class AddRecipe extends React.Component {
                     </form>
                 </div>
             </div>
+              
         )
     }
 /*
