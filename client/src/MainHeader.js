@@ -12,7 +12,7 @@ class MainHeader extends React.Component {
                     <header className='header'>
                         <div className="container flex-container">
                             <h1>Recipe Box</h1>
-                            {on && <AddRecipe toggle={toggle} on={on}/>}
+                            {on && <AddRecipe toggle={toggle} />}
                             <button className="action pull-right" onClick={toggle}>Add Recipe</button>   
                         </div>
                     </header> 
