@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def index
     recipes = Recipe.all
-    render json: recipes, only: [:id, :recipe_name, :img]
+    render json: RecipeSerializer.new(recipes).to_serialized_json
   end
 
   def show
