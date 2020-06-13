@@ -18,6 +18,9 @@ class Tile extends React.Component {
                     <TileFooter 
                         recipeName={recipe.recipe_name}
                         recipeImg={recipe.img}
+                        recipeDescription={recipe.recipe_description}
+                        recipeDirections={recipe.recipe_direction}
+                        ingredients={recipe.ingredients}
                     />
                 </div>
             );

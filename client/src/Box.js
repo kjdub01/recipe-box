@@ -12,9 +12,9 @@ class Box extends React.Component {
                     <div className='box'>
                         <BoxHeader recipeName={this.props.recipeName} toggle={this.props.toggle} /> 
                         <BoxMain 
-                            //ingredients={this.props.ingredients}
+                            ingredients={this.props.ingredients}
                             recipeDirections={this.props.recipeDirections}
-                            //recipeDescription={this.props.recipeDescrption}
+                            recipeDescription={this.props.recipeDescription}
                             recipeImg={this.props.recipeImg}
                         />
                         <BoxFooter 
