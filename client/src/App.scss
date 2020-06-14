@@ -271,9 +271,9 @@ label {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);	
 }
 
-.box__instructions,
-.box__ingredients,
-.box__title {
+.box_instructions,
+.box_ingredients,
+.box_title {
 	
 	padding: .5rem;
 	border: 5px solid transparent;
@@ -292,30 +292,30 @@ label {
 
 }
 
-.box__title {
+.box_title {
 	display: inline-block;
 	margin: 0;
 }
 
-.box__header {
+.box_header {
 	@extend .header
 }
 
-.box__main {
+.box_main {
 	padding: 1em;
 }
 
-.box__img {
+.box_img {
 	width: 100%;
 	height: auto;
 }
 
-.box__footer {
+.box_footer {
 	@extend .header;
   margin-bottom: 0;
 }
 
-.box__subheading {
+.box_subheading {
 	margin-top: 0;
 }
 
