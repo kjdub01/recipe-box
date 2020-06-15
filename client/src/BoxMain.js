@@ -6,12 +6,9 @@ class BoxMain extends React.Component {
         const ingredients = this.props.ingredients,
         listIngredients = ingredients.map((ingredient) => {
             return(
-                <ul className='box_ingredients'>
-                    <li>{ingredient.ingredient_name}</li>
-                </ul>
+                <p className='box_ingredients'>{ingredient.ingredient_name}</p>
             )
         })
-
         return(
             <main className='box_main'>
                 <div className='row'>
