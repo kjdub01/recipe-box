@@ -1,18 +1,23 @@
-function recipeReducer(
-    state = {
-        recipes: []
-    },
-    action
-) {
-    switch (action.type) {
-        case 'ADD_Recipe':
-            return { 
+const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
+    switch(action.type) {
+
+        case 'LOADING_RECIPES':
+            return {
                 ...state,
-                recipes: state.recipes.concat(state.recipies)
+                recipes: [...state.recipes],
+                loading: true
             }
-        default: 
+
+        case 'ADDING_RECIPES':
+            return {
+                ...state,
+                recipes: action.recipes,
+                loading: false
+            }
+        default:
             return state;
     }
-}
+};
+    
 
 export default recipeReducer;
