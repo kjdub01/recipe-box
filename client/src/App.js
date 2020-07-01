@@ -12,15 +12,28 @@ class App extends React.Component {
     this.props.fetchRecipes()
   }
 
-  render() {
-    return(
-      <div>
+  handleLoading = () => {
+    console.log(this.props.loading)
+    if(this.props.loading) {
+      return <div>Loading...</div>
+    } else {
+      return(
+        <div>
         <MainHeader />
         <TileIndex
           recipes={this.props.recipes}
           //show={this.showBox.bind(this)}
         />
         <MainFooter />
+      </div>
+      )
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        {this.handleLoading()}
       </div>
     )
   }
