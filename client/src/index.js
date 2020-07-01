@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import recipeReducer from './reducers/recipeReducer'
-import './index.css';
 import App from './App';
+import './index.css';
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk'
+import recipeReducer from './reducers/recipeReducer'
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(
-    recipeReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-); /* add reducer here */
+const store = createStore(recipeReducer, applyMiddleware(thunk)); /* add reducer here */
 
 ReactDOM.render(
     <Provider store={store}>
