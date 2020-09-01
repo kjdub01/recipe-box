@@ -14,6 +14,14 @@ const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
                 recipes: action.recipes,
                 loading: false
             }
+
+        case 'ADD_Recipe':
+            return{
+                ...state, 
+                recipes: [...state.recipes, action.recipe] 
+            }
+
+
         default:
             return state;
     }
