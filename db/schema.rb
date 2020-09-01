@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_160743) do
+ActiveRecord::Schema.define(version: 2020_09_01_211623) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "ingredient_name"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 2020_03_03_160743) do
     t.text "recipe_direction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
   add_foreign_key "recipe_ingredients", "ingredients"
