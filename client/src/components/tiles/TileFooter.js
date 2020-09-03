@@ -4,7 +4,24 @@ import Box from '../boxes/Box.js'
 
 class TileFooter extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {hover: false}
+        this.toggleHover = this.toggleHover.bind(this)
+    }
+    
+    toggleHover() {
+        this.setState({hover: !this.state.hover})
+    }
+
     render() {
+        let bookmarkStyle;
+        if(this.state.hover) {
+            bookmarkStyle= "zmdi zmdi-bookmark zmdi-hc-2x btn-bookmark"
+        } else {
+            bookmarkStyle= "zmdi zmdi-bookmark-outline zmdi-hc-2x btn-bookmark"
+        }
+
         return (
             <Toggle>
                 {({ on, toggle }) => (
@@ -20,6 +37,8 @@ class TileFooter extends React.Component {
                         <button className="btn-primary" onClick={toggle}>
                             <i className="zmdi zmdi-open-in-new zmdi-hc-lg btn-icon" /> Open Recipe
                         </button>
+
+                        <i className={bookmarkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}/>
 
                     </footer>
                 )}
