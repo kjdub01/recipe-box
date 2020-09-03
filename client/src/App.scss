@@ -93,11 +93,11 @@ input[type=submit] {
 }
 
 .btn-warning {
-	color: fff;	
-  background: red;
+	color: #fff;	
+  background: #d11a2a;
   
   &:hover {
-    background: lighten(red, 5%)
+    background: lighten(#d11a2a, 5%);
   }
 }
 
