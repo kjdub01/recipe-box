@@ -53,7 +53,7 @@ class AddRecipe extends React.Component {
                         <textarea onChange={this.handleChange} id='recipeDescription' placeholder= "Enter Recipe Description" />
                         <textarea onChange={this.handleChange} id='recipeDirections' placeholder= "Enter Recipe Directions" />
                         <input type='text' onChange={this.handleChange} id='recipeImg' placeholder= "Enter Recipe Image URL" />
-                        <button>Submit</button>
+                        <button className="btn-primary">Submit</button>
                     </form>
                     
                 </div>

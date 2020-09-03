@@ -13,7 +13,7 @@ class MainHeader extends React.Component {
                         <div className="container flex-container">
                             <h1>Recipe Box</h1>
                             {on && <AddRecipe toggle={toggle} handleFormSubmit={this.props.handleFormSubmit}/>}
-                            <button className="action pull-right" onClick={toggle}>Add Recipe</button>   
+                            <button className="action pull-right btn-primary" onClick={toggle}>Add Recipe</button>   
                         </div>
                     </header> 
                 )}
