@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class AddRecipe extends React.Component {
 
@@ -46,7 +47,9 @@ class AddRecipe extends React.Component {
                         );
                         e.target.reset();} 
                     }*/>
-                        <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  onClick={this.props.toggle}/> 
+                        <Link to="/">
+                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  onClick={this.props.toggle} />
+                        </Link>
                         <h2 className="form_title">Add Recipe</h2>
                         <input type='text' onChange={this.handleChange} id='recipeName'  placeholder= 'Enter Recipe Name' />
                         <textarea onChange={this.handleChange} id='ingredients' placeholder= "Enter Recipe Ingredients" />
@@ -70,4 +73,7 @@ ref={input => formFields.img = input}
 ref={input => formFields.recipe_direction = input}
 ref={input => formFields.recipe_description = input}
 ref={input => formFields.recipe_name = input}
+
+
+
 */

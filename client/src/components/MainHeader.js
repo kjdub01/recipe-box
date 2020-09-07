@@ -2,6 +2,7 @@ import React from 'react'
 //import styles from './App.scss'
 import AddRecipe from './AddRecipe.js'
 import Toggle from './ToggleRPC.js'
+import { Link } from 'react-router-dom'
 
 class MainHeader extends React.Component {
 
@@ -13,7 +14,9 @@ class MainHeader extends React.Component {
                         <div className="container flex-container">
                             <h1>Recipe Box</h1>
                             {on && <AddRecipe toggle={toggle} handleFormSubmit={this.props.handleFormSubmit}/>}
-                            <button className="action pull-right btn-primary" onClick={toggle}>Add Recipe</button>   
+                            <Link to='add-recipe'>
+                                <button className="action pull-right btn-primary" onClick={toggle}>Add Recipe</button>
+                            </Link>   
                         </div>
                     </header> 
                 )}
