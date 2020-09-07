@@ -48,7 +48,7 @@ class AddRecipe extends React.Component {
                         e.target.reset();} 
                     }*/>
                         <Link to="/">
-                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  onClick={this.props.toggle} />
+                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"   />
                         </Link>
                         <h2 className="form_title">Add Recipe</h2>
                         <input type='text' onChange={this.handleChange} id='recipeName'  placeholder= 'Enter Recipe Name' />
@@ -73,7 +73,5 @@ ref={input => formFields.img = input}
 ref={input => formFields.recipe_direction = input}
 ref={input => formFields.recipe_description = input}
 ref={input => formFields.recipe_name = input}
-
-
 
 */

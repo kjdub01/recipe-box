@@ -9,7 +9,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import recipeReducer from './reducers/recipeReducer'
 import * as serviceWorker from './serviceWorker';
-import AddRecipe from './components/AddRecipe';
+import AddRecipe from './components/recipies/AddRecipe';
 
 const store = createStore(recipeReducer, applyMiddleware(thunk)); /* add reducer here */
 

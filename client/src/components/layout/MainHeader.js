@@ -1,7 +1,7 @@
 import React from 'react'
 //import styles from './App.scss'
-import AddRecipe from './AddRecipe.js'
-import Toggle from './ToggleRPC.js'
+import AddRecipe from '../recipies/AddRecipe.js'
+import Toggle from '../ToggleRPC.js'
 import { Link } from 'react-router-dom'
 
 class MainHeader extends React.Component {
