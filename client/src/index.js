@@ -10,6 +10,7 @@ import thunk from 'redux-thunk'
 import recipeReducer from './reducers/recipeReducer'
 import * as serviceWorker from './serviceWorker';
 import AddRecipe from './components/recipies/AddRecipe';
+import SignIn from './components/auth/SignIn';
 
 const store = createStore(recipeReducer, applyMiddleware(thunk)); /* add reducer here */
 
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Router>
       <Route exact path="/" component={App} />
       <Route path="/add-recipe" component={AddRecipe} />
+      <Route path="/signin" component={SignIn} />
     </Router>
     </ Provider>,
     document.getElementById('root')
