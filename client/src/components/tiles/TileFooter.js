@@ -33,7 +33,7 @@ class TileFooter extends React.Component {
                         recipeDescription={this.props.recipeDescription}
                         ingredients={this.props.ingredients}
                         /> }
-
+                        
                         <button className="btn-primary" onClick={toggle}>
                             <i className="zmdi zmdi-open-in-new zmdi-hc-lg btn-icon" /> Open Recipe
                         </button>
