@@ -108,7 +108,7 @@ input[type=submit] {
 
 //Forms
 
-input[type=text],
+input[type=text], [type=email], [type=password],
 textarea {
 	font: 1rem $font-stack;
 	background-color: rgb(233, 226, 226);
