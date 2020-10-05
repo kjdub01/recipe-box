@@ -20,33 +20,13 @@ class AddRecipe extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         console.log(this.state)
-        /*this.props.addRecipe(this.state);
-        this.setState({
-            recipeName: '',
-            ingredients: '',
-            recipeDescription: '',
-            recipeDirections: '',
-            recipeImg: ''
-        })*/
     }
-
-        //let formFields = {}
     render () {
         return(
             
             <div className="form-bg-overlay">
                 <div className="form-bg">
-                    <form className="form" onSubmit={this.handleOnSubmit} /*onSubmit={ (e) => {
-                        //e.preventDefault();
-                        props.handleFormSubmit(
-                            formFields.recipe_name.value,
-                            formFields.recipe_description.value,
-                            formFields.recipe_direction.value,
-                            formFields.img.value,
-                            formFields.ingredients.value
-                        );
-                        e.target.reset();} 
-                    }*/>
+                    <form className="form" onSubmit={this.handleOnSubmit} >
                         <Link to="/">
                             <i className="zmdi zmdi-close zmdi-hc-2x pull-right"   />
                         </Link>
