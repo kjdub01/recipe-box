@@ -6,9 +6,9 @@ class Tile extends React.Component {
 
     render() {
         const recipes = this.props.recipes,
-            tileNodes = recipes.map((recipe) => {
+            tileNodes = recipes.map((recipe, index) => {
             return(
-                <div className="tile" key={recipe.id.toString}>
+                <div className="tile" key={index}>
                     <TileMain
                     
                     recipeName={recipe.recipe_name}
