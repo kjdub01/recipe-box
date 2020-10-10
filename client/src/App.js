@@ -13,7 +13,6 @@ class App extends React.Component {
   }
 
   handleLoading = () => {
-    console.log(this.props.loading)
     if(this.props.loading) {
       return <div>Loading...</div>
     } else {
@@ -25,7 +24,7 @@ class App extends React.Component {
           //show={this.showBox.bind(this)}
         />
         <MainFooter />
-      </div>
+      </div> 
       )
     }
   }
@@ -41,8 +40,8 @@ class App extends React.Component {
 
 const mapDispatchToProps = state => {
   return {
-    recipes: state.recipes,
-    loading: state.loading
+    recipes: state.recipe.recipes,
+    loading: state.recipe.loading
   }
 }
 
