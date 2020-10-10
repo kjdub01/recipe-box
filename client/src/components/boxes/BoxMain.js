@@ -4,11 +4,11 @@ class BoxMain extends React.Component {
 
     render () {
         const ingredients = this.props.ingredients,
-        listIngredients = ingredients.map((ingredient) => {
+        listIngredients = ingredients.map((ingredient, index) => {
             return(
-                <text>{ingredient.ingredient_name }<br /></text> 
+                <span key={index}>{ (index ? ', ' : '') + ingredient.ingredient_name}</span> 
             )
-        })
+        });
 
         return(
             <main className='box_main'>
