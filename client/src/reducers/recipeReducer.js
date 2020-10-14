@@ -15,10 +15,12 @@ const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
                 loading: false
             }
 
-        case 'ADD_Recipe':
+        case 'CREATE_RECIPE':
             return{
-                ...state, 
-                recipes: [...state.recipes, action.recipe] 
+                recipes: console.log('created recipe', action.recipe)
+        
+          //      ...state,
+          //      recipes: [...state.recipes, action.recipe]
             }
 
 
@@ -29,3 +31,4 @@ const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
     
 
 export default recipeReducer;
+

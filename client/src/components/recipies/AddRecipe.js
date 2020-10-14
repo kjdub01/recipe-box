@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { createRecipe } from '../../actions/createRecipe.js'
 
 class AddRecipe extends React.Component {
 
@@ -19,7 +21,8 @@ class AddRecipe extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state)
+        //console.log(this.state)
+        this.props.createRecipe(this.state)
     }
     render () {
         return(
@@ -46,7 +49,13 @@ class AddRecipe extends React.Component {
     }
 }
 
-export default AddRecipe;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createRecipe: (recipe) => dispatch(createRecipe(recipe)),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddRecipe);
 
 /*
 ref={input => formFields.img = input}
