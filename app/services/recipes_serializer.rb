@@ -6,9 +6,8 @@ class RecipesSerializer
   
     def to_serialized_json
       options = {
-        include: {
-          ingredients: {
-            only: [:ingredient_name]}
+        include: [:ingredients: {
+            only: [:id, :ingredient_name]}
         },
         except: [:created_at, :updated_at]
       }
