@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
     if recipe
       render json: RecipeSerializer.new(recipe).to_serialized_json
     else
-      render json: { message: "Recipe Not Found"}
+      render json: "error"
     end
   end
 
@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
     if recipe.save
       render json: RecipeSerializer.new(recipe).to_serialized_json
     else 
-      render json: (error: recipes.errors.messages), status: 422
+      render json: "error"
     end
   end
 
@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
     if recipe.update(recipe_params)
       render json: RecipeSerializer.new(recipe).to_serialized_json
     else 
-      render json: (error: recipes.errors.messages), status: 422
+      render "error"
     end
   end
 
@@ -39,7 +39,7 @@ class RecipesController < ApplicationController
     if recipe.destroy
       render head :no_content
     else 
-      render json: (error: recipes.errors.messages), status: 422
+      render "error"
     end
 
   end
@@ -48,7 +48,11 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(
-      :recipe_name, :recipe_description, :recipe_direction, :img,
-      ingredients: ingredient_name)
+      :recipe_name, 
+      :recipe_description, 
+      :recipe_direction, 
+      :img,
+      ingredients_attributes: [:id, :ingredient_name]
+      )
   end
 end
