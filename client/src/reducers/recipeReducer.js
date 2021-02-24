@@ -1,4 +1,4 @@
-const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
+const recipeReducer = (state = {recipes: [], loading: false}, action) => {
     switch(action.type) {
 
         case 'LOADING_RECIPES':
@@ -16,13 +16,12 @@ const recipeReducer = (state = {recipes: [], requesting: false}, action) => {
             }
 
         case 'CREATE_RECIPE':
-            return{
-                recipes: console.log('created recipe', action.recipe)
-        
-          //      ...state,
-          //      recipes: [...state.recipes, action.recipe]
-            }
+                console.log('created recipe', action.recipe);
+                return state;
 
+        case 'CREATE_RECIPE_ERROR':
+            console.log('create_recipe_error', action.error)
+            
 
         default:
             return state;
