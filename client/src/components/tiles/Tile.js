@@ -1,36 +1,37 @@
 import React from 'react'
 import TileMain from './TileMain'
 import TileFooter from './TileFooter'
+import { Link } from "react-router-dom";  
 
 class Tile extends React.Component {
 
     render() {
         const recipes = this.props.recipes,
-            tileNodes = recipes.map((recipe, index) => {
-            return(
-                <div className="tile" key={index}>
-                    <TileMain
-                    
-                    recipeName={recipe.recipe_name}
-                    recipeImg={recipe.img}
-                    />
-               
-                    <TileFooter 
-                        recipeName={recipe.recipe_name}
-                        recipeImg={recipe.img}
-                        recipeDescription={recipe.recipe_description}
-                        recipeDirections={recipe.recipe_direction}
-                        ingredients={recipe.ingredients}
-                    />
-                </div>
+            tileNodes = recipes.map((recipe) => {
+                return(
+                   
+                        <div className="tile" key={recipe.id}>
+                            <Link style={{ textDecoration: 'none' }} to={"/recipes/" + recipe.id}>
+                            <TileMain
+                                recipeName={recipe.recipe_name}
+                                recipeImg={recipe.img}
+                             />
+                            </Link> 
+
+                            <TileFooter
+                                recipe={recipe} 
+                                recipeId={recipe.id}   
+                            />   
+                        </div>
+                       
             );
         })
         return (
             <div className="tile-container">
-                {tileNodes}   
+                {tileNodes}
             </div>
         )
     }
 }
 
-export default Tile;
+export default Tile
