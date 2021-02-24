@@ -1,12 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import styles from './App.scss'
-import { fetchRecipes } from './actions/fetchRecipes.js'
 import MainHeader from './components/layout/MainHeader.js'
 import MainFooter from './components/layout/MainFooter.js'
 import TileIndex from './components/tiles/TileIndex.js';
+import ModalRootContainter from './Modal/ModalRootContainer'
 
-class App extends React.Component {
+function App ({children}) {
 
   componentDidMount() {
     this.props.fetchRecipes()
@@ -23,20 +22,21 @@ class App extends React.Component {
           recipes={this.props.recipes}
           //show={this.showBox.bind(this)}
         />
+          {children}
+          <ModalRootContainter />
         <MainFooter />
       </div> 
       )
     }
   }
 
-  render() {
+ 
     return(
-      <div>
-        {this.handleLoading()}
+      <div handleLoading >
+
       </div>
     )
   }
-}
 
 const mapDispatchToProps = state => {
   return {
@@ -46,7 +46,10 @@ const mapDispatchToProps = state => {
 }
 
 
-export default connect(mapDispatchToProps, { fetchRecipes}) (App);
+export default App;
+
+//{this.handleLoading()}
+//connect(mapDispatchToProps, { fetchRecipes})
 
 
 

@@ -231,8 +231,26 @@ label {
 	margin-bottom: 1em;
 }
 .tile_title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  
 	margin: 0;
 }
+
+.inner-title {
+  display: inline-block;
+}
+
+.tile-title a {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+
+
 .tile_footer {
 	border-top: 1px solid rgba(160,160,160,0.2);
 	padding: .5rem;
@@ -246,21 +264,126 @@ label {
 	height: 150px;
 }
 
+//Recipe
+
+.recipe {
+  background-color: #fff;
+  margin: 0 -10px 38px;
+  position: relative;
+  z-index: 2;
+}
+
+.recipe-containter {
+  margin: 15px 0 1em 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.recipe-description {
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.4;
+  //margin-bottom: 15px;
+  padding-left: 12em;
+  width: 40%;
+  display: inline-block
+}
+
+.recipe-img-container {
+  position: relative;
+  //max-width: 600px;
+  text-align: right;
+  float: right;
+  //width: 40%;
+  padding-right: 190px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.recipe-instructions {
+  margin: 0 auto;
+  padding: 0 0 35px;
+}
+
+.ingredients {
+  display: block;
+  float: left;
+  margin-bottom: 0;
+  padding-right: 1em;
+  width: 32.31579%;
+}
+
+.directions {
+  display: block;
+  margin: 0;
+  float: right;
+  width: 62.63158%;
+}
+
+.title-container {
+  padding: 15px, 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.recipe-title {
+  font-size: 42px;
+  line-height: 45px;
+  text-align: left;
+  padding-left: 4.5em;
+}
+
 // Box
 
 .box-bg-overlay {
   position: fixed;
   top:  0;
   left: 0;
+  bottom: 0;
+  right: 0;
 	width: 100%;
 	height: 100%;
-	overflow-y: auto;
-	background:	url();
-	background:	rgba(0, 0, 0, 0.5);
+	//overflow-y: auto;
+	//background:	url();
+	background:	rgba(0, 0, 0, 0.65);
 	/* box 10 
      * form-bg 15
 	 */
-	z-index: 10;
+	z-index: 1000;
+}
+
+.modal-content-div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  overflow: auto;
+  text-align: center;
+  cursor: pointer;
+  background:	rgba(0, 0, 0, 0.65);
+}
+
+.box-dialog-div {
+  position: relative;
+  outline: 0;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  max-width: auto;
+  cursor: default;
+  border-radius: 4px;
+  margin-top: 90px;
+}
+
+.box-dialog-div:after {
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  content: '';
 }
 
 .box {
@@ -303,11 +426,13 @@ label {
 }
 
 .box_header {
-	@extend .header
+  @extend .header;
+  margin-bottom: 0;
 }
 
 .box_main {
-	padding: 1em;
+  padding: 1em;
+  background-color: #fff;
 }
 
 .box_img {
