@@ -2,14 +2,15 @@ import React from 'react'
 
 class TileMain extends React.Component {
     render() {
-        var heroDiv;
+        let heroDiv;
         if (this.props.recipeImg) {
             heroDiv = <div
                 className="tile_hero"
                 style={{
                     background: "url(" + this.props.recipeImg + ")", 
                     backgroundSize: "100% auto",
-                    backgroundPosition: "center center"	
+                    backgroundPosition: "center center",	
+                    textDecoration: "none"
                 }}
             />
         } else {
