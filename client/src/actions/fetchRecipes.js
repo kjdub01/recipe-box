@@ -3,6 +3,6 @@ export function fetchRecipes() {
     dispatch({ type: 'LOADING_RECIPES' });
     fetch('http://localhost:3001/recipes')
       .then(response => response.json())
-      .then(responseJSON => dispatch({ type: 'ADDING_RECIPES', recipes: responseJSON }));
-  };
-}
+      .then(recipes => dispatch({ type: 'ADDING_RECIPES', recipes }))
+    };
+  }
