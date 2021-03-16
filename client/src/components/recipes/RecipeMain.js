@@ -1,16 +1,23 @@
 import React from "react"
 
 class RecipeMain extends React.Component {
+
     render() {
-        console.log(this.props.img)
         return(
-           <div className="recipe-intro">
-               <p className="recipe-description">{this.props.recipeDescription}</p>
-               <div className="recipe-img-container">
+            <div className="article">
+                <div className="recipe-intro">
+                    <p className="recipe-description">{this.props.recipeDescription}</p>
+                <div className="recipe-img-container">
                     <img className="recipe-img" src={this.props.img} />
-               </div>
-               
-           </div>
+                </div>
+                </div>
+                <div className="recipe-instructions">
+                    <section className="ingredients-wrap">
+                        <h3 className="ingredients-heading">Ingredients</h3>
+                        <ul className="ingredients-list">{this.props.ingredients.map(( ingredient) => <li>{ingredient.ingredient_name}</li>)}</ul> 
+                    </section>
+                </div>
+            </div>
         )
     }
 }
