@@ -285,16 +285,16 @@ label {
   line-height: 1.4;
   //margin-bottom: 15px;
   padding-left: 12em;
-  width: 40%;
+  width: 35%;
   display: inline-block
 }
 
 .recipe-img-container {
   position: relative;
   //max-width: 600px;
-  text-align: right;
+  text-align: center;
   float: right;
-  //width: 40%;
+  width: 35%;
   padding-right: 190px;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -313,11 +313,22 @@ label {
   width: 32.31579%;
 }
 
-.directions {
+.recipe-directions-heading {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.directions-wrap {
   display: block;
-  margin: 0;
   float: right;
-  width: 62.63158%;
+  width: 46%;
+}
+.directions-wrap p {
+  width: 90%;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 .title-container {
@@ -346,6 +357,9 @@ label {
 .ingredients-list {
   padding-left: 11.7em;
   list-style-type: none;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 // Box

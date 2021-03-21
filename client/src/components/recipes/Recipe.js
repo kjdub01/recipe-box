@@ -26,7 +26,7 @@ class Recipe extends React.Component {
                             />
                             <RecipeMain 
                                 recipeDescription = {this.props.recipe.recipe_description}
-                                recipeDirections = {this.props.recipe.recipe_directions}
+                                recipeDirections = {this.props.recipe.recipe_direction}
                                 img = {this.props.recipe.img}
                                 ingredients = {this.props.recipe.ingredients}
                             />
