@@ -10,11 +10,13 @@ class MainHeader extends React.Component {
         return(
             <header className='header'>
                 <div className="container flex-container">
-                    <h1>Recipe Box</h1>
-                        <Link to='/add-recipe'>
-                            <button className="action pull-right btn-primary" >Add Recipe</button>
-                        </Link>   
-                    </div>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to='/'>
+                        <h1>Recipe Box</h1>
+                    </Link>
+                    <Link to='/add-recipe'>
+                        <button className="action pull-right btn-primary" >Add Recipe</button>
+                    </Link>   
+                </div>
             </header> 
         );
     }    
