@@ -17,12 +17,6 @@ class AddRecipe extends React.Component {
         recipeImg: ''
     }
 
-    goBack = () => {
-        return(
-            this.props.history.goBack()
-        )
-    }
-
     handleChange = (event) => {
         this.setState({
             [event.target.id]: event.target.value
@@ -31,13 +25,12 @@ class AddRecipe extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        //console.log(this.state)
-        this.props.createRecipe(this.state)
+        console.log(this.state)
+        //this.props.createRecipe(this.state);
     }
 
     addIngrident = (event) => {
-        event.preventDefault();
-        let ingredientNames = event.target.value.split(', ')
+        let ingredientNames = event.target.value.split('\n')
         let ingridentObjects = ingredientNames.map((name) => ({ingredientName: name}))
         
         this.setState({
@@ -51,8 +44,9 @@ class AddRecipe extends React.Component {
             <div className="form-bg-overlay">
                 <div className="form-bg">
                     <form className="form" onSubmit={this.handleOnSubmit} >
-                        
-                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"   onClick={this.goBack}/>
+                        <Link style={{ textDecoration: 'none'}} to='/'>
+                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  />
+                        </Link>
                         
                         <h2 className="form_title">Add Recipe</h2>
                         <input type='text' onChange={this.handleChange} id='recipeName'  placeholder= 'Enter Recipe Name' />
@@ -69,6 +63,8 @@ class AddRecipe extends React.Component {
         )
     }
 }
+
+//const mapStateToProps = ({ recipes }) => ({ recipes })
 
 const mapDispatchToProps = (dispatch) => {
     return {
