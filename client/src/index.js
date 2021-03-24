@@ -1,22 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
 import App from './App';
+import rootReducer from './reducers/rootReducer'
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddRecipe from './components/recipes/AddRecipe';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp'
 import Recipe from './components/recipes/Recipe'
+
 import './index.css';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk'
-import rootReducer from './reducers/rootReducer'
+
 import * as serviceWorker from './serviceWorker';
 
 
 
 
-const store = createStore(rootReducer, applyMiddleware(thunk)); /* add reducer here */
+const store = createStore(
+  rootReducer, 
+  composeWithDevTools(applyMiddleware(thunk))
+); /* add reducer, thunk, & Dev tools here */
 
 
 ReactDOM.render(
