@@ -4,7 +4,7 @@ import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    recipe: reciepeReducer
+    recipes: reciepeReducer
 });
 
 export default rootReducer
