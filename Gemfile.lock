@@ -90,7 +90,7 @@ GEM
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    puma (3.12.4)
+    puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
     rack-cors (1.1.1)
@@ -157,7 +157,7 @@ DEPENDENCIES
   byebug
   foreman (~> 0.87.0)
   listen (~> 3.2, >= 3.2.1)
-  puma (~> 3.12.4)
+  puma (~> 3.12.6)
   rack-cors
   rails (~> 6.0, >= 6.0.2.2)
   spring
