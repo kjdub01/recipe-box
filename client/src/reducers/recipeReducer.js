@@ -16,17 +16,13 @@ const recipeReducer = (state = {recipes: [], loading: false}, action) => {
             }
 
         case 'CREATE_RECIPE':
-             console.log('created recipe', action.recipe)
-            return {
-                state
-             }   
+                console.log('created recipe', action.recipe);
+                return state;
 
         case 'CREATE_RECIPE_ERROR':
-             console.log('create project error', action.err)
-             return {
-                 state
-             }
+            console.log('create_recipe_error', action.error)
             
+
         default:
             return state;
     }

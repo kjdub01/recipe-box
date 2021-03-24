@@ -38,8 +38,8 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state){
-    return {recipes: state.recipes.recipes,
-            loading: state.recipes.loading}
+    return {recipes: state.recipe.recipes,
+            loading: state.recipe.loading}
   }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TileIndex);
