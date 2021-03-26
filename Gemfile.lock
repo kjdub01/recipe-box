@@ -89,11 +89,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
     minitest (5.14.4)
-<<<<<<< HEAD
     msgpack (1.4.2)
-=======
-    msgpack (1.3.3)
->>>>>>> 07f5015d3a99c9365de6b63fc502381c54e7a83e
     nio4r (2.5.7)
     nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
@@ -132,11 +128,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 1.0)
     rake (13.0.3)
-<<<<<<< HEAD
     rb-fsevent (0.10.4)
-=======
-    rb-fsevent (0.10.3)
->>>>>>> 07f5015d3a99c9365de6b63fc502381c54e7a83e
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     spring (2.1.1)
@@ -151,11 +143,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
-<<<<<<< HEAD
     thor (1.1.0)
-=======
-    thor (1.0.1)
->>>>>>> 07f5015d3a99c9365de6b63fc502381c54e7a83e
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     websocket-driver (0.7.3)
