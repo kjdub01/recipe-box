@@ -4,7 +4,7 @@ import MainFooter from "../layout/MainFooter"
 import RecipeHeader from "./RecipeHeader"
 import RecipeMain from "./RecipeMain"
 import { connect } from 'react-redux'
-import { fetchRecipes } from '../../actions/fetchRecipes'
+import { fetchRecipes } from '../../actions/recipeActions'
 
 
 class Recipe extends React.Component {
