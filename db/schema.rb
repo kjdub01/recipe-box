@@ -2,8 +2,8 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_28_034448) do
 
   create_table "ingredients", force: :cascade do |t|
-    t.string "ingredient_name"
+    t.string "name"
     t.integer "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -21,17 +21,17 @@ ActiveRecord::Schema.define(version: 2020_10_28_034448) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "recipe_name"
+    t.string "name"
     t.string "img"
-    t.text "recipe_description"
-    t.text "recipe_direction"
+    t.text "description"
+    t.text "directions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "user_recipes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "recipe_id"
+    t.bigint "user_id"
+    t.bigint "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipe_id"], name: "index_user_recipes_on_recipe_id"

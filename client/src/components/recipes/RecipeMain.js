@@ -14,7 +14,7 @@ class RecipeMain extends React.Component {
                 <div className="recipe-instructions">
                     <section className="ingredients-wrap">
                         <h3 className="ingredients-heading">INGREDIENTS</h3>
-                        <ul className="ingredients-list">{this.props.ingredients.map(( ingredient) => <li>{ingredient.ingredient_name}</li>)}</ul> 
+                        <ul className="ingredients-list">{this.props.ingredients.map(( ingredient) => <li key={ingredient.id}>{ingredient.name}</li>)}</ul> 
                     </section>
                     <section className="directions-wrap">
                         <h3 className="recipe-directions-heading">PREPARATION</h3>

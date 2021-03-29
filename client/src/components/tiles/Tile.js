@@ -13,7 +13,7 @@ class Tile extends React.Component {
                         <div className="tile" key={recipe.id}>
                             <Link style={{ textDecoration: 'none' }} to={"/recipes/" + recipe.id}>
                             <TileMain
-                                recipeName={recipe.recipe_name}
+                                recipeName={recipe.name}
                                 recipeImg={recipe.img}
                              />
                             </Link> 

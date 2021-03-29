@@ -22,11 +22,11 @@ class Recipe extends React.Component {
                     <MainHeader />
                         <div className="recipe">
                             <RecipeHeader
-                                recipeName = {this.props.recipe.recipe_name} 
+                                recipeName = {this.props.recipe.name} 
                             />
                             <RecipeMain 
-                                recipeDescription = {this.props.recipe.recipe_description}
-                                recipeDirections = {this.props.recipe.recipe_direction}
+                                recipeDescription = {this.props.recipe.description}
+                                recipeDirections = {this.props.recipe.directions}
                                 img = {this.props.recipe.img}
                                 ingredients = {this.props.recipe.ingredients}
                             />

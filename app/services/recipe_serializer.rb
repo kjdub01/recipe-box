@@ -8,7 +8,7 @@ class RecipeSerializer
     options = {
       include: {
         ingredients: {
-          only: [:id, :ingredient_name]}
+          only: [:id, :name]}
       },
       except: [:created_at, :updated_at]
     }
