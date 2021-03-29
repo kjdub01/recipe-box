@@ -16,10 +16,10 @@ const recipeReducer = (state = {recipes: [], loading: false}, action) => {
             }
 
         case 'CREATE_RECIPE':
-             console.log('created recipe', action.recipe)
-            return {
-                state
-             }   
+            return { ...state,
+                recipes: [...state.recipes, action.recipe],
+                loading: false 
+            }   
 
         case 'CREATE_RECIPE_ERROR':
              console.log('create project error', action.err)
