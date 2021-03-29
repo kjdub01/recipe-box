@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Tile from './Tile'
-import { fetchRecipes } from '../../actions/fetchRecipes.js'
+import { fetchRecipes } from '../../actions/recipeActions.js'
 
 class TileIndex extends React.Component {
     componentDidMount() {
