@@ -52,7 +52,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state, ownProps){
     const id = ownProps.match.params.recipeId
-    const recipes = state.recipe.recipes
+    const recipes = state.recipes.recipes
     const recipe = recipes ? recipes[id -1] : null
     return {recipe: recipe}
 }
