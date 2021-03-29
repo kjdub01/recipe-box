@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { createRecipe } from '../../actions/createRecipe.js'
+import { createRecipe } from '../../actions/recipeActions.js'
 
 class AddRecipe extends React.Component {
 
     state = {
-        recipeName: '',
-        ingredients: [
+        name: '',
+        ingredients_attributes: [
             {
-                ingredientName: ''
+                name: ''
             }
         ],
-        recipeDescription: '',
-        recipeDirections: '',
-        recipeImg: ''
+        description: '',
+        directions: '',
+        img: ''
     }
 
     handleChange = (event) => {
@@ -25,13 +25,13 @@ class AddRecipe extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state)
-        //this.props.createRecipe(this.state);
+        this.props.createRecipe(this.state);
+        this.props.history.push('/')
     }
 
     addIngrident = (event) => {
         let ingredientNames = event.target.value.split('\n')
-        let ingridentObjects = ingredientNames.map((name) => ({ingredientName: name}))
+        let ingridentObjects = ingredientNames.map((name) => ( {name: name} ))
         
         this.setState({
             [event.target.id]: ingridentObjects
@@ -49,11 +49,11 @@ class AddRecipe extends React.Component {
                         </Link>
                         
                         <h2 className="form_title">Add Recipe</h2>
-                        <input type='text' onChange={this.handleChange} id='recipeName'  placeholder= 'Enter Recipe Name' />
-                        <textarea onChange={this.addIngrident} id='ingredients' placeholder= "Enter Recipe Ingredients" />
-                        <textarea onChange={this.handleChange} id='recipeDescription' placeholder= "Enter Recipe Description" />
-                        <textarea onChange={this.handleChange} id='recipeDirections' placeholder= "Enter Recipe Directions" />
-                        <input type='text' onChange={this.handleChange} id='recipeImg' placeholder= "Enter Recipe Image URL" />
+                        <input type='text' onChange={this.handleChange} id='name'  placeholder= 'Enter Recipe Name' />
+                        <textarea onChange={this.addIngrident} id='ingredients_attributes' placeholder= "Enter Recipe Ingredients" />
+                        <textarea onChange={this.handleChange} id='description' placeholder= "Enter Recipe Description" />
+                        <textarea onChange={this.handleChange} id='directions' placeholder= "Enter Recipe Directions" />
+                        <input type='text' onChange={this.handleChange} id='img' placeholder= "Enter Recipe Image URL" />
                         <button className="btn-primary">Submit</button>
                     </form>
                     
@@ -64,15 +64,8 @@ class AddRecipe extends React.Component {
     }
 }
 
-//const mapStateToProps = ({ recipes }) => ({ recipes })
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        createRecipe: (recipe) => dispatch(createRecipe(recipe)),
-    }
-}
-
-export default connect(null, mapDispatchToProps)(AddRecipe);
+export default connect(null, { createRecipe })(AddRecipe);
 
 /*
 ref={input => formFields.img = input}
