@@ -9,7 +9,6 @@ import { fetchRecipes } from '../../actions/recipeActions'
 
 class Recipe extends React.Component {
 
-
     handleLoading = () => {
         if (!this.props.recipe){
             return <div>Loading ...</div>
@@ -43,10 +42,6 @@ class Recipe extends React.Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return { fetchRecipes: () => dispatch(fetchRecipes()) }
-}
-
 function mapStateToProps(state, ownProps){
     const id = ownProps.match.params.recipeId
     const recipes = state.recipes.recipes
@@ -54,6 +49,6 @@ function mapStateToProps(state, ownProps){
     return {recipe: recipe}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Recipe)
+export default connect(mapStateToProps) (Recipe)
 
 //export default Recipe;
