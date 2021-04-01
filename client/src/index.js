@@ -35,7 +35,7 @@ ReactDOM.render(
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/recipes/:recipeId" component={Recipe} />
-          <Route path="/" component={App} />
+          <Route exact path="/recipes" component={App} />
         </Switch>
       </Router>
     </ Provider>,

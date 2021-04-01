@@ -10,7 +10,7 @@ class MainHeader extends React.Component {
         return(
             <header className='header'>
                 <div className="container flex-container">
-                    <Link style={{ textDecoration: 'none', color: 'white' }} to='/'>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to='/recipes'>
                         <h1>Recipe Box</h1>
                     </Link>
                     <Link to='/add-recipe'>

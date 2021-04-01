@@ -44,7 +44,7 @@ class AddRecipe extends React.Component {
             <div className="form-bg-overlay">
                 <div className="form-bg">
                     <form className="form" onSubmit={this.handleOnSubmit} >
-                        <Link style={{ textDecoration: 'none'}} to='/'>
+                        <Link style={{ textDecoration: 'none'}} to='/recipes'>
                             <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  />
                         </Link>
                         
