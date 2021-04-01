@@ -9,9 +9,6 @@ import { fetchRecipes } from '../../actions/recipeActions'
 
 class Recipe extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchRecipes()
-    }
 
     handleLoading = () => {
         if (!this.props.recipe){
