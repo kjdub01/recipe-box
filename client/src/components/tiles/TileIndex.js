@@ -13,11 +13,9 @@ class TileIndex extends React.Component {
           return <div>Loading...</div>
         } else {
           return(
-            <div>
               <Tile
                 recipes={this.props.recipes}
-              />
-          </div> 
+              /> 
           )
         }
       }
@@ -25,9 +23,7 @@ class TileIndex extends React.Component {
     render() {
         return(
             <div className='container'>
-                <main className="tile-container">
-                    {this.handleLoading()}
-                </main>
+                {this.handleLoading()}
             </div>
         )    
     }

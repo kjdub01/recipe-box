@@ -27,9 +27,9 @@ class Tile extends React.Component {
             );
         })
         return (
-            <div className="tile-container">
+            <main className="tile-container">
                 {tileNodes}
-            </div>
+            </main>
         )
     }
 }
