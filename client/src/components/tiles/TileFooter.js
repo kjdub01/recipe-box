@@ -11,10 +11,10 @@ class TileFooter extends React.Component {
         this.toggleClick = this.toggleClick.bind(this)
     }
 
-    goToRecipe() {
-        this.props.history.push(`/recipes/${this.props.recipeId}`)
+    //goToRecipe() {
+        //this.props.history.push(`/recipes/${this.props.recipeId}`)
 
-    }
+    //}
 
     
     toggleHover() {
