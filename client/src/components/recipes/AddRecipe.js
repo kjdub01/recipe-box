@@ -40,14 +40,12 @@ class AddRecipe extends React.Component {
 
     render () {
         return(
-            
             <div className="form-bg-overlay">
                 <div className="form-bg">
                     <form className="form" onSubmit={this.handleOnSubmit} >
                         <Link style={{ textDecoration: 'none'}} to='/recipes'>
                             <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  />
                         </Link>
-                        
                         <h2 className="form_title">Add Recipe</h2>
                         <input type='text' onChange={this.handleChange} id='name'  placeholder= 'Enter Recipe Name' />
                         <textarea onChange={this.addIngrident} id='ingredients_attributes' placeholder= "Enter Recipe Ingredients" />
@@ -55,25 +53,11 @@ class AddRecipe extends React.Component {
                         <textarea onChange={this.handleChange} id='directions' placeholder= "Enter Recipe Directions" />
                         <input type='text' onChange={this.handleChange} id='img' placeholder= "Enter Recipe Image URL" />
                         <button className="btn-primary">Submit</button>
-                    </form>
-                    
+                    </form>  
                 </div>
-            </div>
-              
+            </div>   
         )
     }
 }
 
-
 export default connect(null, { createRecipe })(AddRecipe);
-
-/*
-ref={input => formFields.img = input}
-ref={input => formFields.recipe_direction = input}
-ref={input => formFields.recipe_description = input}
-ref={input => formFields.recipe_name = input}
-
-
-<Link to="/">
-</Link>
-*/
