@@ -4,6 +4,10 @@ import { connect } from 'react-redux'
 import { createRecipe } from '../../actions/recipeActions.js'
 
 class AddRecipe extends React.Component {
+    constructor(props){
+        super(props);
+        this.goBack = this.goBack.bind(this);
+     }
 
     state = {
         name: '',
@@ -15,6 +19,10 @@ class AddRecipe extends React.Component {
         description: '',
         directions: '',
         img: ''
+    }
+
+    goBack(){
+        this.props.history.goBack();
     }
 
     handleChange = (event) => {
@@ -43,10 +51,9 @@ class AddRecipe extends React.Component {
             <div className="form-bg-overlay">
                 <div className="form-bg">
                     <form className="form" onSubmit={this.handleOnSubmit} >
-                        <Link style={{ textDecoration: 'none'}} to='/recipes'>
-                            <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  />
-                        </Link>
+                        <i className="zmdi zmdi-close zmdi-hc-2x pull-right"  onClick={this.goBack}/>
                         <h2 className="form_title">Add Recipe</h2>
+
                         <input type='text' onChange={this.handleChange} id='name'  placeholder= 'Enter Recipe Name' />
                         <textarea onChange={this.addIngrident} id='ingredients_attributes' placeholder= "Enter Recipe Ingredients" />
                         <textarea onChange={this.handleChange} id='description' placeholder= "Enter Recipe Description" />
