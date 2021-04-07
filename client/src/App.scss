@@ -84,8 +84,9 @@ input[type=submit] {
 }
 
 .btn-primary {
-	color: #fff;
+	color: #551A8B;
   background: #eab200;
+  font-weight: bold;
 
   &:hover{
     background: lighten(#eab200, 5% );		
@@ -140,7 +141,7 @@ label {
 .form-bg {
   top: 0;
   bottom: 0;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	background: rgb(233, 226, 226);
 	left: 0;
