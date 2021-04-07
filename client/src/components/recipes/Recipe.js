@@ -24,11 +24,8 @@ class Recipe extends React.Component {
                             <RecipeHeader
                                 recipeName = {this.props.recipe.name} 
                             />
-                            <RecipeMain 
-                                recipeDescription = {this.props.recipe.description}
-                                recipeDirections = {this.props.recipe.directions}
-                                img = {this.props.recipe.img}
-                                ingredients = {this.props.recipe.ingredients}
+                            <RecipeMain
+                                recipe={this.props.recipe} 
                             />
                         </div>
                     <MainFooter />
