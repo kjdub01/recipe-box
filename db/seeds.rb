@@ -16,6 +16,8 @@ recipe1 = Recipe.create({
   recipe1.ingredients.create(name: '4 ounces cold butter')
   recipe1.ingredients.create(name: 'anchovy paste (or other filling)')
 
+  recipe1.comments.create(author: 'Julie', content: "I don't like anchovies so I used shrimp paste")
+
 recipe2 = Recipe.create({
   name: 'Baba Ghanouj',
   img: 'https://cocoaandlavender.com/wp-content/uploads/2017/07/babaghanouj3.jpg',
@@ -32,6 +34,8 @@ recipe2 = Recipe.create({
   recipe2.ingredients.create(name: 'warm water')
   recipe2.ingredients.create(name: 'chopped fresh parsley, for garnish')
   recipe2.ingredients.create(name: 'flatbreads, for serving')
+
+  recipe2.comments.create(author: "Rob", content: "Wish I was with you eating this")
 
 recipe3 = Recipe.create({
   name: 'Blue Cheese Tart (sometimes with Figs!)',
@@ -54,3 +58,5 @@ recipe3 = Recipe.create({
   recipe3.ingredients.create(name: '3 fresh figs, cut pole-to-pole in 1/4-inch slices')
   recipe3.ingredients.create(name: 'chestnut honey, or other flavorful honey, for serving')
   recipe3.ingredients.create(name: 'additional quartered figs, for serving')
+
+  recipe3.comments.create(author: "Braiden", content: "So glad we could reconnect over food.")
