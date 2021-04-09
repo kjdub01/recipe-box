@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_28_034448) do
+ActiveRecord::Schema.define(version: 2020_09_01_211623) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "author"
+    t.text "content"
+    t.bigint "recipe_id"
+    t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
@@ -29,20 +36,4 @@ ActiveRecord::Schema.define(version: 2020_10_28_034448) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_recipes", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "recipe_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["recipe_id"], name: "index_user_recipes_on_recipe_id"
-    t.index ["user_id"], name: "index_user_recipes_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-  end
-
-  add_foreign_key "user_recipes", "recipes"
-  add_foreign_key "user_recipes", "users"
 end
