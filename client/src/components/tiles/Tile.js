@@ -11,8 +11,8 @@ const Tile = ({recipes}) => {
                         <div className="tile" key={recipe.id}>
                         <Link style={{ textDecoration: 'none' }} to={"/recipes/" + recipe.id}> 
                             <TileMain recipe={recipe} key={recipe.id}/>
-                            <TileFooter />
                         </Link>
+                            <TileFooter />
                         </div>
                     )
                 })}
