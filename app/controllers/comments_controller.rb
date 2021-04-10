@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
     def index
         comments = Comment.all
-        render json: CommentSerializer.new(comments).to_serialized_json
+        render json: CommentsSerializer.new(comments).to_serialized_json
     end
 
     def show
@@ -31,5 +31,14 @@ class CommentsController < ApplicationController
         else 
             render "error"
         end
+    end
+
+    private
+
+    def comment_params
+        params.require(:comment).permit(
+            :author,
+            :content
+        )
     end
 end
