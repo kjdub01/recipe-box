@@ -1,10 +1,10 @@
-import authReducer from './authReducer'
-import reciepeReducer from './recipeReducer'
+import { commentsReducer } from './commentsReducer'
+import { recipesReducer } from './recipesReducer'
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
-    auth: authReducer,
-    recipes: reciepeReducer
+    recipes: recipesReducer,
+    comments: commentsReducer
 });
 
 export default rootReducer
