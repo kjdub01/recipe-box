@@ -3,13 +3,54 @@ $color-primary: #7260b7;
 $font-stack: "roboto", "Helvetica Neue", Helvetica, Arial;
 $color-font: 333;
 
-.thumb-icon {
-  color: #551A8B;
-  margin-right: .3em;
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.star-icon {
+  margin-right: .05em;
+  display: inline-block;
+  white-space: nowrap;
+  width: 14px;
+  overflow: hidden;
+  height: 14px;
 }
 
 .helpful-actions {
-  color: #551A8B;
+  cursor: pointer;
+}
+
+.comment-actions {
+  color: #767676;
+  font-size: .8rem;
+  margin-top: 3px;
+  margin-bottom: 7px;
+
+  &:hover {
+    color: #551A8B;
+  }
+}
+
+.comment-header {
+  font-size: .8rem;
+}
+
+.comment-owner {
+  color: #222;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.comment-body{
+  font-size: .9em;
+  line-height: 15px;
+  margin-top: 5px;
+  white-space: pre-line;
+  word-wrap: break-word;
 }
 
 body{ 

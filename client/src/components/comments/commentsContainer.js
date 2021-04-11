@@ -9,10 +9,9 @@ class CommentsContainer extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            <div>
-                comments container
+            <div className="section-container">
+                <h2 className="section-title">Tips and Tricks</h2>
                 <CommentsList recipeId={this.props.recipeId}/>
             </div>
         )
