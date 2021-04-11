@@ -1,4 +1,5 @@
 import React from "react"
+import CommentsContainer from "../comments/commentsContainer";
 
 const RecipeMain = ({recipe}) => {
     return (
@@ -17,6 +18,9 @@ const RecipeMain = ({recipe}) => {
                 <section className="directions-wrap">
                     <h3 className="recipe-directions-heading">PREPARATION</h3>
                     <p className="recipe-steps">{recipe.directions} </p>
+                    <div className="comments-mount">
+                        <CommentsContainer recipeId={recipe.id}/>
+                    </div>
                 </section>
             </div>
         </div>
