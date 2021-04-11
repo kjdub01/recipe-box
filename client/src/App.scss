@@ -3,6 +3,15 @@ $color-primary: #7260b7;
 $font-stack: "roboto", "Helvetica Neue", Helvetica, Arial;
 $color-font: 333;
 
+.thumb-icon {
+  color: #551A8B;
+  margin-right: .3em;
+}
+
+.helpful-actions {
+  color: #551A8B;
+}
+
 body{ 
 	font: 16px $font-stack;
   color: $color-font;
