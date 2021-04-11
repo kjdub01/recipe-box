@@ -1,4 +1,4 @@
-export function fetchRecipes() {
+export const fetchRecipes = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_RECIPES' });
     fetch('http://localhost:3001/recipes')
