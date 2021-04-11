@@ -10,8 +10,6 @@ import rootReducer from './reducers/rootReducer'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddRecipe from './components/recipes/AddRecipe';
-import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp'
 import Recipe from './components/recipes/Recipe'
 
 import './index.css';
@@ -32,8 +30,6 @@ ReactDOM.render(
       <Router >
         <Switch>
           <Route path="/add-recipe" component={AddRecipe} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
           <Route path="/recipes/:recipeId" component={Recipe} />
           <Route exact path="/recipes" component={App} />
         </Switch>
