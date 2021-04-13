@@ -53,6 +53,12 @@ $color-font: 333;
   word-wrap: break-word;
 }
 
+.comments-thread {
+  overflow: hidden;
+  padding: 30px 0 15px 15px;
+  position: relative;
+}
+
 body{ 
 	font: 16px $font-stack;
   color: $color-font;
@@ -179,6 +185,11 @@ textarea {
 	    box-shadow: 0 1px 0 0 #7d6eb8;
 	}
 }
+
+.comment-input, input[type=text], textarea {
+  width: 95%;
+}
+
 textarea {
 	margin-top: .7rem;
 	height: 8rem;
@@ -192,7 +203,7 @@ label {
   top: 0;
   bottom: 0;
 	position: relative;
-	width: 100%;
+	width: 95%;
 	background: rgb(233, 226, 226);
 	left: 0;
 	/* box 10 
