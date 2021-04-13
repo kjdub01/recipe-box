@@ -3,10 +3,8 @@ export const commentsReducer = (state = [], action) => {
         case 'FETCH_COMMENTS':
             return action.payload
 
-        case 'CREATE_COMMENTS':
-            return{ ...state,
-                comments: [...state.comments, action.comment]
-            }
+        case 'CREATE_COMMENT':
+            return[ ...state, action.comment]
 
         default:
             return state
