@@ -13,8 +13,10 @@ class CommentsContainer extends React.Component {
         return (
             <div className="section-container">
                 <h2 className="section-title">Tips and Tricks</h2>
-                <CommentsForm />
+                <CommentsForm recipeId={this.props.recipeId}/>
+                <section className="comments-thread">
                 <CommentsList recipeId={this.props.recipeId}/>
+                </section>
             </div>
         )
     }
