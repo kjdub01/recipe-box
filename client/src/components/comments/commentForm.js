@@ -1,9 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createComment } from "../../actions/commentsActions"
 
 class CommentsForm extends React.Component {
     state = {
         author: '',
         content: '',
+        recipe_id: this.props.recipeId
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.id]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.createComment(this.state)
+        //console.log(this.state)
+        event.target.reset();
     }
 
     render() {
@@ -12,8 +28,8 @@ class CommentsForm extends React.Component {
             <div className="form-bg">
                 <div className="comment-input">
                     <form className="form" onSubmit={this.handleSubmit}>
-                        <input type='text' value={this.state.author} onChange={this.handleChange} id='author' placeholder='Add your name'></input>
-                        <textarea value={this.state.content} onChange={this.handleChange} id='content' placeholder='Tell us your suggestion'/>
+                    <input type='text' onChange={this.handleChange} id='author'  placeholder= "What's Your Name?" />
+                        <textarea onChange={this.handleChange} id='content' placeholder= "Tell Us Your Tip" />
                         <button className="btn-primary" type='submit'>Add Tip</button>   
                     </form>
                 </div>
@@ -23,4 +39,4 @@ class CommentsForm extends React.Component {
 
 }
 
-export default CommentsForm;
+export default connect(null, { createComment })(CommentsForm);    
