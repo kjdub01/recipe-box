@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     def show
         comment = Comment.find_by(id: params[:id])
             if comment
-                render json: CommentSerializer.new(comment).to_serialized_json
+                render json: CommentsSerializer.new(comment).to_serialized_json
             else
                 render json: "error"
             end
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         comment = Comment.new(comment_params)
 
         if comment.save
-            render json: CommentSerializer.new(comment).to_serialized_json
+            render json: CommentsSerializer.new(comment).to_serialized_json
         else 
             render json: "error"
         end
@@ -38,7 +38,8 @@ class CommentsController < ApplicationController
     def comment_params
         params.require(:comment).permit(
             :author,
-            :content
+            :content,
+            :recipe_id
         )
     end
 end
