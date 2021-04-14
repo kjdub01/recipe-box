@@ -31,7 +31,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/add-recipe" component={AddRecipe} />
           <Route path="/recipes/:recipeId" component={Recipe} />
-          <Route exact path="/recipes" component={App} />
+          <Route exact path="/" component={App} />
         </Switch>
       </Router>
     </ Provider>,
