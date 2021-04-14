@@ -160,6 +160,7 @@ input[type=submit] {
 .btn-warning {
 	color: #fff;	
   background: #d11a2a;
+  float: right;
   
   &:hover {
     background: lighten(#d11a2a, 5%);
@@ -354,24 +355,23 @@ label {
   font-weight: 200;
   line-height: 1.4;
   //margin-bottom: 15px;
-  padding-left: 12em;
+  padding-left: 9em;
   width: 35%;
   display: inline-block
 }
 
 .recipe-img-container {
   position: relative;
-  //max-width: 600px;
   text-align: center;
   float: right;
   width: 35%;
-  padding-right: 190px;
   margin-top: 1em;
   margin-bottom: 1em;
+  padding-right: 10em;
 }
 
 .recipe-img {
-  max-width: 90%;
+  max-width: 100%;
   height:auto;
 }
 
@@ -410,6 +410,8 @@ label {
   padding: 15px, 0;
   box-sizing: border-box;
   outline: 0;
+  display: inline-block;
+  width: 50%;
 }
 
 .recipe-title {
@@ -417,6 +419,8 @@ label {
   line-height: 45px;
   text-align: left;
   padding-left: 4.5em;
+  display: inline-block;
+  width: 50%;
 }
 
 .ingredients-wrap {
@@ -435,6 +439,18 @@ label {
   font-size: 1em;
   font-weight: 200;
   line-height: 1.4;
+}
+
+.recipe-controls-primary {
+  text-align: left;
+  display: inline-block;
+  height: 30px;
+  width: 37%;
+}
+
+.top-note {
+  padding-bottom: 20px;
+  position: relative;
 }
 
 // Box
