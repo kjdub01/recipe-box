@@ -7,8 +7,8 @@ function CommentsList (props) {
         <div className="thread-container">
             { associatedComments && associatedComments.map(comment => {
                 return (
-                    <div className="thread-comment">
-                        <div className="comment-content" key={comment.id}>
+                    <div className="thread-comment" key={comment.id}>
+                        <div className="comment-content" >
                             <div className="comment-header">
                                 <span className="comment-owner">{comment.author}</span>
                             </div>
