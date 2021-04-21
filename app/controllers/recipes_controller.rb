@@ -35,13 +35,8 @@ class RecipesController < ApplicationController
 
   def destroy
     recipe = Recipe.find_by(id: params[:id])
-
-    if recipe.destroy
-      render head :no_content
-    else 
-      render "error"
-    end
-
+    recipe.destroy
+    head :no_content
   end
 
   private
