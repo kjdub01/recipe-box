@@ -1,3 +1,4 @@
+
 export const recipesReducer = (state = {recipes: [], loading: false}, action) => {
     switch(action.type) {
 
@@ -23,6 +24,14 @@ export const recipesReducer = (state = {recipes: [], loading: false}, action) =>
              console.log('create project error', action.err)
              return {
                  state
+             }
+
+        case 'DELETE_RECIPE':
+            const recipes = state.recipes.filter(recipe => recipe.id !== action.id)
+            const comments = state.comments.filter(comment => comment.recipe_id !== action.id)
+             return {
+                recipes: recipes,
+                comments: comments //state.recipes.filter(recipe => recipe.id !== action.id)
              }
             
         default:
