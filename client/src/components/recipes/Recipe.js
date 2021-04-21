@@ -22,7 +22,7 @@ class Recipe extends React.Component {
                     <MainHeader />
                         <div className="recipe">
                             <RecipeHeader
-                                recipeName = {this.props.recipe.name} 
+                                recipe = {this.props.recipe} goBack ={this.props.history.goBack} 
                             />
                             <RecipeMain
                                 recipe={this.props.recipe} 
@@ -44,13 +44,14 @@ class Recipe extends React.Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return { fetchRecipes: () => dispatch(fetchRecipes()) }
+    return { fetchRecipes: () => dispatch(fetchRecipes())}
 }
 
 function mapStateToProps(state, ownProps){
-    const id = ownProps.match.params.recipeId
+    const findId = ownProps.match.params.recipeId
+    const id = parseInt(findId, 10)
     const recipes = state.recipes.recipes
-    const recipe = recipes ? recipes[id -1] : null
+    const recipe = recipes ? recipes.find(recipe => recipe.id === id) : null
     return {recipe: recipe}
 }
 
