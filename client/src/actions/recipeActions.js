@@ -9,7 +9,7 @@ export const fetchRecipes = () => {
 
   export const createRecipe = recipe => {
     return dispatch => {
-      fetch ('http://localhost:3001/recipes', {
+      fetch('http://localhost:3001/recipes', {
         method: 'POST',
         body: JSON.stringify({recipe: recipe}),
         headers: { 'Content-Type': 'application/json' }
@@ -18,4 +18,14 @@ export const fetchRecipes = () => {
       .then(recipe => dispatch({ type: 'CREATE_RECIPE', recipe }))
     }
   }
-    
+
+  export const deleteRecipe = id => {
+    return dispatch => {
+      fetch('http://localhost:3001/recipes/' + id, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json'}
+      })
+      .then(response => response.json())
+      .then(id => dispatch({type: 'DELETE_RECIPE', id}))
+    }
+  }
