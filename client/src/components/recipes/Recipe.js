@@ -4,14 +4,10 @@ import MainFooter from "../layout/MainFooter"
 import RecipeHeader from "./RecipeHeader"
 import RecipeMain from "./RecipeMain"
 import { connect } from 'react-redux'
-import { fetchRecipes } from '../../actions/recipeActions'
+import { deleteRecipe } from '../../actions/recipeActions'
 
 
 class Recipe extends React.Component {
-
-    componentDidMount() {
-        this.props.fetchRecipes()
-    }
 
     handleLoading = () => {
         if (!this.props.recipe){
@@ -22,7 +18,7 @@ class Recipe extends React.Component {
                     <MainHeader />
                         <div className="recipe">
                             <RecipeHeader
-                                recipe = {this.props.recipe} goBack ={this.props.history.goBack} 
+                                recipe = {this.props.recipe} deleteRecipe = {this.props.deleteRecipe} 
                             />
                             <RecipeMain
                                 recipe={this.props.recipe} 
@@ -43,8 +39,12 @@ class Recipe extends React.Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return { fetchRecipes: () => dispatch(fetchRecipes())}
+function mapDispatchToProps(dispatch, ownProps) {
+    const findId = ownProps.match.params.recipeId
+    const id = parseInt(findId, 10)
+    return {
+        deleteRecipe: () => dispatch(deleteRecipe(id))
+    }
 }
 
 function mapStateToProps(state, ownProps){
