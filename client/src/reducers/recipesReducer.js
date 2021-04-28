@@ -1,5 +1,4 @@
-
-export const recipesReducer = (state = {recipes: [], loading: false}, action) => {
+export const recipesReducer = (state = {recipes: [], loading: false, deleted: false}, action) => {
     switch(action.type) {
 
         case 'LOADING_RECIPES':
@@ -28,11 +27,14 @@ export const recipesReducer = (state = {recipes: [], loading: false}, action) =>
 
         case 'DELETE_RECIPE':
             const recipes = state.recipes.filter(recipe => recipe.id !== action.id)
-            const comments = state.comments.filter(comment => comment.recipe_id !== action.id)
              return {
                 recipes: recipes,
-                comments: comments //state.recipes.filter(recipe => recipe.id !== action.id)
              }
+
+        case 'DELETE_RECIPES_SUCCESS':
+            return {
+                deleted: true
+            }
             
         default:
             return state;
