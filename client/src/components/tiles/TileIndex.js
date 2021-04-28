@@ -8,6 +8,11 @@ class TileIndex extends React.Component {
         this.props.fetchRecipes()
   }
 
+  componentDidUpdated() {
+      if (this.props.deleted)
+      this.props.fetchRecipes()
+  }
+
     handleLoading = () => {
         if(this.props.loading) {
           return <div>Loading...</div>
