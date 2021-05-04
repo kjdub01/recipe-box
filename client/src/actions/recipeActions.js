@@ -3,7 +3,7 @@ export const fetchRecipes = () => {
     dispatch({ type: 'LOADING_RECIPES' });
     fetch('http://localhost:3001/recipes')
       .then(response => response.json())
-      .then(recipes => dispatch({ type: 'ADDING_RECIPES', recipes }))
+      .then(recipes => dispatch({ type: 'FETCH_RECIPES', recipes }))
     };
   }
 
