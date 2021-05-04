@@ -9,7 +9,7 @@ const RecipeHeader = (props) => {
             </div>
             <div className="recipe-controls-primary">
                 <Link to='/'>
-                <button className="btn-warning" onClick={() => {props.deleteRecipe(props.recipe.id)}}>Delete Recipe</button>
+                <button className="btn-warning" onClick={() => {props.deleteRecipe()}}>Delete Recipe</button>
                 </Link>
             </div>
         </header>
