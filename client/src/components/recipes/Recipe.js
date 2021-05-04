@@ -1,13 +1,18 @@
-import React from "react"
-import MainHeader from "../layout/MainHeader"
-import MainFooter from "../layout/MainFooter"
-import RecipeHeader from "./RecipeHeader"
-import RecipeMain from "./RecipeMain"
-import { connect } from 'react-redux'
-import { deleteRecipe } from '../../actions/recipeActions'
 
+  
+import React from "react"
+import MainHeader from "../layout/mainHeader"
+import MainFooter from "../layout/mainFooter"
+import RecipeHeader from "./recipeHeader"
+import RecipeMain from "./recipeMain"
+import { connect } from 'react-redux'
+import { deleteRecipe, fetchRecipes } from '../../actions/recipeActions'
 
 class Recipe extends React.Component {
+    
+    componentDidMount() {
+        this.props.fetchRecipes()
+  }    
 
     handleLoading = () => {
         if (!this.props.recipe){
@@ -42,7 +47,7 @@ class Recipe extends React.Component {
 function mapDispatchToProps(dispatch, ownProps) {
     const findId = ownProps.match.params.recipeId
     const id = parseInt(findId, 10)
-    return {
+    return { fetchRecipes: () => dispatch(fetchRecipes()),
         deleteRecipe: () => dispatch(deleteRecipe(id))
     }
 }
@@ -50,7 +55,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 function mapStateToProps(state, ownProps){
     const findId = ownProps.match.params.recipeId
     const id = parseInt(findId, 10)
-    const recipes = state.recipes.recipes
+    const recipes = state.recipes
     const recipe = recipes ? recipes.find(recipe => recipe.id === id) : null
     return {recipe: recipe}
 }
