@@ -1,9 +1,10 @@
 import React from 'react'
-import TileMain from './TileMain'
-import TileFooter from './TileFooter'
-import { Link } from "react-router-dom";  
+import TileMain from './tileMain'
+import TileFooter from './tileFooter'
+import { Link } from "react-router-dom";
+import { connect }  from "react-redux"
 
-const Tile = ({recipes}) => {
+const RecipesList = ({recipes}) => {
     return (
         <div className="tile-container"> 
                 { recipes && recipes.map(recipe => {
@@ -20,4 +21,8 @@ const Tile = ({recipes}) => {
     )
 }
 
-export default Tile
+const mapStateToProps = state => {
+    return  {recipes: state.recipes}
+} 
+
+export default connect(mapStateToProps)(RecipesList)

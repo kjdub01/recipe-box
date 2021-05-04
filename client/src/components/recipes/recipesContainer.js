@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Tile from './Tile'
+import RecipesList from './recipesList'
 import { fetchRecipes } from '../../actions/recipeActions.js'
 
-class TileIndex extends React.Component {
+class RecipesContainer extends React.Component {
     componentDidMount() {
         this.props.fetchRecipes()
   }
@@ -18,9 +18,7 @@ class TileIndex extends React.Component {
           return <div>Loading...</div>
         } else {
           return(
-              <Tile
-                recipes={this.props.recipes}
-              /> 
+              <RecipesList /> 
           )
         }
       }
@@ -39,8 +37,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state){
-    return {recipes: state.recipes.recipes,
-            loading: state.recipes.loading}
+    return {loading: state.loading}
   }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TileIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer);
