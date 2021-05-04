@@ -1,40 +1,29 @@
-export const recipesReducer = (state = {recipes: [], loading: false, deleted: false}, action) => {
+export const recipesReducer = (state = [], action) => {
     switch(action.type) {
 
-        case 'LOADING_RECIPES':
-            return { ...state,
-                recipes: [...state.recipes],
-                loading: true
-            }
+        //case 'LOADING_RECIPES':
+            //return state.loading = true
         
-        case 'ADDING_RECIPES':
-            return { ...state,
-                recipes: action.recipes,
-                loading: false
-            }
+        case 'FETCH_RECIPES':
+            return action.recipes
+                //state.loading = false
 
         case 'CREATE_RECIPE':
-            return { ...state,
-                recipes: [...state.recipes, action.recipe],
-                loading: false 
-            }   
+            return [...state.recipes, action.recipe]
+                //loading false    
 
         case 'CREATE_RECIPE_ERROR':
              console.log('create project error', action.err)
-             return {
-                 state
-             }
+             return state
 
         case 'DELETE_RECIPE':
-            const recipes = state.recipes.filter(recipe => recipe.id !== action.id)
-             return {
-                recipes: recipes,
-             }
+        const recipes = state.filter(recipe => recipe.id !== action.id)
+        return recipes
+                
 
-        case 'DELETE_RECIPES_SUCCESS':
-            return {
-                deleted: true
-            }
+        //case 'DELETE_RECIPES_SUCCESS':
+            //return
+                //state.deleted = true
             
         default:
             return state;
