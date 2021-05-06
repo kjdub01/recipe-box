@@ -19,13 +19,13 @@ export const fetchRecipes = () => {
     }
   }
 
-  export const deleteRecipe = (id) => {
+  export const deleteRecipe = (id, history) => {
     return dispatch => {
       fetch(`http://localhost:3001/recipes/${id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json'}
       })
       .then(id => dispatch({type: 'DELETE_RECIPE', id}))
-      .then( () => dispatch({type: 'DELETE_RECIPE_SUCCESS'}))
+      .then( () => history.replace('/'))
     }
   }
