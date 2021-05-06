@@ -47,8 +47,9 @@ class Recipe extends React.Component {
 function mapDispatchToProps(dispatch, ownProps) {
     const findId = ownProps.match.params.recipeId
     const id = parseInt(findId, 10)
+    const history = ownProps.history
     return { fetchRecipes: () => dispatch(fetchRecipes()),
-        deleteRecipe: () => dispatch(deleteRecipe(id))
+        deleteRecipe: () => dispatch(deleteRecipe(id, history))
     }
 }
 
