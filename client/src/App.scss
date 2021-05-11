@@ -70,6 +70,11 @@ $color-font: 333;
 body{ 
 	font: 16px $font-stack;
   color: $color-font;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1, h2, h3 {
@@ -102,7 +107,7 @@ li {
 .header {
   background-color: #7260b7;
   color: white;
-  padding: 1em;
+  padding: 1.5em;
   margin-bottom: 1em;
 }
 
@@ -110,8 +115,7 @@ li {
   background-color: #3f000f;
   color: white;
   padding: 1em;
-  margin-top: 210px;
-  margin-bottom: 0;
+  margin-top: 1em;
   clear: both;
 }
 
@@ -617,6 +621,24 @@ $grid-number: 12;
 .container {
     max-width: $container-width;
     margin: 0 auto;
+}
+
+.row,
+.main-container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
+.main-container {
+  max-width: $container-width;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .column,
