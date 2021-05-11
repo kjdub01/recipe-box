@@ -25,7 +25,7 @@ class RecipesContainer extends React.Component {
 
     render() {
         return(
-            <div className='container'>
+            <div className='main-container'>
                 {this.handleLoading()}
             </div>
         )    
