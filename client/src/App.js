@@ -7,11 +7,11 @@ import RecipesContainer from './components/recipes/recipesContainer.js';
 function App () {
 
     return(
-      <div>
+      <>
         <MainHeader />
         <RecipesContainer />
         <MainFooter />
-      </div>
+      </>
     )
 }
 
