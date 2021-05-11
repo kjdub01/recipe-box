@@ -9,7 +9,7 @@ export const recipesReducer = (state = [], action) => {
                 //state.loading = false
 
         case 'CREATE_RECIPE':
-            return [...state.recipes, action.recipe]
+            return [...state, action.recipe]
                 //loading false    
 
         case 'CREATE_RECIPE_ERROR':
