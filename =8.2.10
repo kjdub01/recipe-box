@@ -1,0 +1,8 @@
++ postcss@8.2.15
+updated 1 package and audited 2378 packages in 19.522s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+found 79 moderate severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
