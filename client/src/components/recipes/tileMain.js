@@ -2,6 +2,7 @@ import React from 'react'
 
 const TileMain = ({recipe}) => {
     let heroDiv
+    
     switch(recipe.img === null) {
         default:
         case true:

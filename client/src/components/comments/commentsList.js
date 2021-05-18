@@ -27,7 +27,6 @@ function CommentsList (props) {
                         </div>
                     </div>
                 )
-            
             })}
         </div> 
     )

@@ -18,7 +18,6 @@ class CommentsForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.createComment(this.state)
-        //console.log(this.state)
         event.target.reset();
     }
 
@@ -36,7 +35,6 @@ class CommentsForm extends React.Component {
             </div>
         )
     }
-
 }
 
 export default connect(null, { createComment })(CommentsForm);    
