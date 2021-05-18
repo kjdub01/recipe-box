@@ -1,4 +1,4 @@
-export const recipesReducer = (state = [], action) => {
+export const RecipesReducer = (state = [], action) => {
     switch(action.type) {
 
         //case 'LOADING_RECIPES':

@@ -1,5 +1,5 @@
 import React from "react"
-import CommentsContainer from "../comments/commentsContainer";
+import CommentsContainer from "../comments/CommentsContainer";
 
 const RecipeMain = ({recipe}) => {
     return (

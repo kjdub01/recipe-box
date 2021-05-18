@@ -1,12 +1,12 @@
-import { commentsReducer } from './commentsReducer'
-import { recipesReducer } from './recipesReducer'
-import { uiReducer } from './uiReducer'
+import { CommentsReducer } from './CommentsReducer'
+import { RecipesReducer } from './RecipesReducer'
+import { UiReducer } from './UiReducer'
 import { combineReducers } from 'redux'
 
-const rootReducer = combineReducers({
-    recipes: recipesReducer,
-    comments: commentsReducer,
-    ui: uiReducer
+const RootReducer = combineReducers({
+    recipes: RecipesReducer,
+    comments: CommentsReducer,
+    ui: UiReducer
 });
 
-export default rootReducer
+export default RootReducer

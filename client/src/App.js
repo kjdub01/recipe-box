@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './App.scss'
-import MainHeader from './components/layout/mainHeader.js'
-import MainFooter from './components/layout/mainFooter.js'
-import RecipesContainer from './components/recipes/recipesContainer.js';
+import MainHeader from './components/layout/MainHeader.js'
+import MainFooter from './components/layout/MainFooter.js'
+import RecipesContainer from './components/recipes/RecipesContainer.js';
 
 function App () {
 

@@ -1,4 +1,4 @@
-export const commentsReducer = (state = [], action) => {
+export const CommentsReducer = (state = [], action) => {
     switch(action.type) {
         case 'FETCH_COMMENTS':
             return action.payload

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { createRecipe } from '../../actions/recipeActions.js'
+import { createRecipe } from '../../actions/RecipeActions.js'
 
 class AddRecipe extends React.Component {
     constructor(props){

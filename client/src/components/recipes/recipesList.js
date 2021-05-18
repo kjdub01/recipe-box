@@ -1,6 +1,6 @@
 import React from 'react'
-import TileMain from './tileMain'
-import TileFooter from './tileFooter'
+import TileMain from './TileMain'
+import TileFooter from './TileFooter'
 import { Link } from "react-router-dom";
 import { connect }  from "react-redux"
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchComments } from '../../actions/commentsActions'
-import CommentsList from './commentsList'
-import CommentsForm from './commentForm'
+import { fetchComments } from '../../actions/CommentsActions'
+import CommentsList from './CommentsList'
+import CommentsForm from './CommentForm'
 
 class CommentsContainer extends React.Component {
     componentDidMount() {

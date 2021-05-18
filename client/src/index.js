@@ -6,11 +6,11 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import App from './App';
-import rootReducer from './reducers/rootReducer'
+import rootReducer from './reducers/RootReducer'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddRecipe from './components/recipes/addRecipe';
-import Recipe from './components/recipes/recipe'
+import AddRecipe from './components/recipes/AddRecipe';
+import Recipe from './components/recipes/Recipe'
 
 import * as serviceWorker from './serviceWorker';
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createComment } from "../../actions/commentsActions"
+import { createComment } from "../../actions/CommentsActions"
 
 class CommentsForm extends React.Component {
     state = {

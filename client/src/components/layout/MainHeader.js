@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import NavbarLinks from './navbarLinks'
+import NavbarLinks from './NavbarLinks'
 
 const MainHeader = () => {
     return (

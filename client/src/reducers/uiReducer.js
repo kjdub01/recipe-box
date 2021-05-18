@@ -1,4 +1,4 @@
-export const uiReducer = (state = [], action) => {
+export const UiReducer = (state = [], action) => {
     switch(action.type) {
 
         case 'LOADING_RECIPES':

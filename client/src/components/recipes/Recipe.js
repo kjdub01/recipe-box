@@ -1,12 +1,12 @@
 
   
 import React from "react"
-import MainHeader from "../layout/mainHeader"
-import MainFooter from "../layout/mainFooter"
-import RecipeHeader from "./recipeHeader"
-import RecipeMain from "./recipeMain"
+import MainHeader from "../layout/MainHeader"
+import MainFooter from "../layout/MainFooter"
+import RecipeHeader from "./RecipeHeader"
+import RecipeMain from "./RecipeMain"
 import { connect } from 'react-redux'
-import { deleteRecipe, fetchRecipes } from '../../actions/recipeActions'
+import { deleteRecipe, fetchRecipes } from '../../actions/RecipeActions'
 
 class Recipe extends React.Component {
     
