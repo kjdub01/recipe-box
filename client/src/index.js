@@ -12,8 +12,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddRecipe from './components/recipes/addRecipe';
 import Recipe from './components/recipes/recipe'
 
-import './index.css';
-
 import * as serviceWorker from './serviceWorker';
 
 
