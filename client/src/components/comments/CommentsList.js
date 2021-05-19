@@ -14,7 +14,7 @@ function CommentsList (props) {
                             </div>
                             <div className="comment-body">
                                 {comment.content}
-                             </div>
+                            </div>
                             <div className="comment-actions">
                                 <div className="helpful-actions">
                                     <span className="star-icon">
