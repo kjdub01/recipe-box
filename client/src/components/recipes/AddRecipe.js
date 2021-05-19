@@ -4,22 +4,22 @@ import { connect } from 'react-redux'
 import { createRecipe } from '../../actions/RecipeActions.js'
 
 class AddRecipe extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
+
+        this.state = {
+            name: '',
+            ingredients_attributes: [
+                {
+                    name: ''
+                }
+            ],
+            description: '',
+            directions: '',
+            img: ''
+        }
         this.goBack = this.goBack.bind(this);
      }
-
-    state = {
-        name: '',
-        ingredients_attributes: [
-            {
-                name: ''
-            }
-        ],
-        description: '',
-        directions: '',
-        img: ''
-    }
 
     goBack(){
         this.props.history.goBack();
