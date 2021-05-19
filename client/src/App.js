@@ -16,9 +16,3 @@ function App () {
 }
 
 export default App;
-
-//{this.handleLoading()}
-//connect(mapDispatchToProps, { fetchRecipes})
-
-
-
