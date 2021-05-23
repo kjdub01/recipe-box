@@ -1,27 +1,18 @@
 export const UiReducer = (state = [], action) => {
-    switch(action.type) {
+    switch (action.type) {
 
         case 'LOADING_RECIPES':
-            return {
-                loading: true
-            }
-        
+            return true
+
         case 'FETCH_RECIPES':
-            return {
-                loading: false
-            }
+            return false
 
         case 'CREATE_RECIPE':
-            return {
-                loading: false
-            }
+            return false
 
         case 'DELETE_RECIPES_SUCCESS':
-            return {
-                deleted: true
-            }
-                
-            
+            return true
+
         default:
             return state;
     }

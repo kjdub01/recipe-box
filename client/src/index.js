@@ -18,22 +18,22 @@ import * as serviceWorker from './serviceWorker';
 
 
 const store = createStore(
-  rootReducer, 
+  rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 ); /* add reducer, thunk, & Dev tools here */
 
 
 ReactDOM.render(
-    <Provider store={store}>
-      <Router >
-        <Switch>
-          <Route path="/add-recipe" component={AddRecipe} />
-          <Route path="/recipes/:recipeId" component={Recipe} />
-          <Route exact path="/" component={App} />
-        </Switch>
-      </Router>
-    </ Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <Router >
+      <Switch>
+        <Route path="/add-recipe" component={AddRecipe} />
+        <Route path="/recipes/:recipeId" component={Recipe} />
+        <Route exact path="/" component={App} />
+      </Switch>
+    </Router>
+  </ Provider>,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

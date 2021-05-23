@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-function CommentsList (props) {
+function CommentsList(props) {
     let associatedComments = props.comments.filter(comment => comment.recipe_id === props.recipeId)
-    return(
+    return (
         <div className="thread-container">
-            { associatedComments && associatedComments.map(comment => {
+            {associatedComments && associatedComments.map(comment => {
                 return (
                     <div className="thread-comment" key={comment.id}>
                         <div className="comment-content" >
@@ -20,7 +20,7 @@ function CommentsList (props) {
                                     <span className="star-icon">
                                         <i className="zmdi zmdi-star-outline"></i>
                                     </span>
-                                    5 
+                                    5
                                     This is helpful
                                 </div>
                             </div>
@@ -28,12 +28,12 @@ function CommentsList (props) {
                     </div>
                 )
             })}
-        </div> 
+        </div>
     )
 }
 
 const mapStateToProps = state => {
-    return {comments: state.comments}
+    return { comments: state.comments }
 }
 
 export default connect(mapStateToProps)(CommentsList);

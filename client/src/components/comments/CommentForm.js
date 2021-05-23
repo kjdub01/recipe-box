@@ -22,14 +22,14 @@ class CommentsForm extends React.Component {
     }
 
     render() {
-        return(
-            
+        return (
+
             <div className="form-bg">
                 <div className="comment-input">
                     <form className="form" onSubmit={this.handleSubmit}>
-                    <input type='text' onChange={this.handleChange} id='author'  placeholder= "What's Your Name?" />
-                        <textarea onChange={this.handleChange} id='content' placeholder= "Tell Us Your Tip" />
-                        <button className="btn-primary" type='submit'>Add Tip</button>   
+                        <input type='text' onChange={this.handleChange} id='author' placeholder="What's Your Name?" />
+                        <textarea onChange={this.handleChange} id='content' placeholder="Tell Us Your Tip" />
+                        <button className="btn-primary" type='submit'>Add Tip</button>
                     </form>
                 </div>
             </div>

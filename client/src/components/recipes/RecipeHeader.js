@@ -7,7 +7,7 @@ const RecipeHeader = (props) => {
                 <h1 className="recipe-title">{props.recipe.name}</h1>
             </div>
             <div className="recipe-controls-primary">
-                <button className="btn-warning" onClick={() => {props.deleteRecipe()}}>Delete Recipe</button>
+                <button className="btn-warning" onClick={() => { props.deleteRecipe() }}>Delete Recipe</button>
             </div>
         </header>
     )

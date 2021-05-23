@@ -5,7 +5,7 @@ const NavbarLinks = () => {
     return (
         <button className="action pull-right btn-primary">
             <NavLink to='/add-recipe' style={{ textDecoration: 'none', fontWeight: 'bold' }}>Add Recipe</NavLink>
-        </button> 
+        </button>
     )
 }
 

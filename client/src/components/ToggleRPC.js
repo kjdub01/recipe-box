@@ -17,7 +17,7 @@ class Toggle extends React.Component {
         return children({
             on: this.state.on,
             toggle: this.toggle,
-        });  
+        });
     }
 }
 
