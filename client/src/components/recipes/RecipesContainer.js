@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import RecipesList from './RecipesList'
+import SearchBar from './SearchBar'
 import { fetchRecipes } from '../../actions/RecipeActions.js'
 
 class RecipesContainer extends React.Component {
@@ -8,17 +9,14 @@ class RecipesContainer extends React.Component {
         this.props.fetchRecipes()
     }
 
-    componentDidUpdated() {
-        if (this.props.deleted)
-            this.props.fetchRecipes()
-    }
-
     handleLoading = () => {
         if (this.props.loading) {
             return <div>Loading...</div>
         } else {
             return (
-                <RecipesList />
+                <>
+                    <SearchBar recipes={this.props.recipes} />
+                </>
             )
         }
     }
@@ -37,7 +35,10 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-    return { loading: state.loading }
+    return {
+        loading: state.loading,
+        recipes: state.recipes
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer);

@@ -21,8 +21,4 @@ const RecipesList = ({ recipes }) => {
     )
 }
 
-const mapStateToProps = state => {
-    return { recipes: state.recipes }
-}
-
-export default connect(mapStateToProps)(RecipesList)
+export default RecipesList;
