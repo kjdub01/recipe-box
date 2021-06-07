@@ -7,11 +7,8 @@ export const fetchRecipes = () => {
   };
 }
 
-
 export const createRecipe = recipe => {
-  console.log("b")
   return dispatch => {
-    console.log("c")
     fetch('http://localhost:3001/recipes', {
       method: 'POST',
       body: JSON.stringify({ recipe: recipe }),
@@ -19,12 +16,9 @@ export const createRecipe = recipe => {
     })
       .then(response => response.json())
       .then(recipe => {
-        console.log("d")
         return dispatch({ type: 'CREATE_RECIPE', recipe })
       })
-    console.log("e")
   }
-  console.log("f")
 }
 
 export const deleteRecipe = (id, history) => {

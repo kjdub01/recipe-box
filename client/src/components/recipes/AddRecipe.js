@@ -1,5 +1,4 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createRecipe } from '../../actions/RecipeActions.js'
 
@@ -33,9 +32,7 @@ class AddRecipe extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log("a")
         this.props.createRecipe(this.state);
-        console.log("g")
         this.props.history.push('/')
     }
 
