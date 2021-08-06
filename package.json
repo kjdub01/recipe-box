@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "prettier": "2.3.0"
+  },
+  "dependencies": {
+    "tar": "^6.1.6"
   }
 }
