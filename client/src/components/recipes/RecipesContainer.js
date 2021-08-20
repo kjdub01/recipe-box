@@ -16,7 +16,6 @@ class RecipesContainer extends React.Component {
             return (
                 <>
                     <SearchBar recipes={this.props.recipes} />
-                    <RecipesList recipes={this.props.recipes} />
                 </>
             )
         }
