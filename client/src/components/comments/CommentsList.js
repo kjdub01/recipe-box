@@ -20,8 +20,9 @@ function CommentsList(props) {
                                     <span className="star-icon">
                                         <i className="zmdi zmdi-star-outline"></i>
                                     </span>
-                                    5
-                                    This is helpful
+
+                                    <button onClick={this.increment}>5
+                                    This is helpful</button>
                                 </div>
                             </div>
                         </div>
