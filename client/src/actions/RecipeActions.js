@@ -1,7 +1,7 @@
 export const fetchRecipes = () => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_RECIPES' });
-    fetch('http://localhost:3001/recipes')
+    fetch('https://powerful-savannah-59386.herokuapp.com/recipes')
       .then(response => response.json())
       .then(recipes => dispatch({ type: 'FETCH_RECIPES', recipes }))
   };
@@ -9,7 +9,7 @@ export const fetchRecipes = () => {
 
 export const createRecipe = recipe => {
   return dispatch => {
-    fetch('http://localhost:3001/recipes', {
+    fetch('https://powerful-savannah-59386.herokuapp.com/recipes', {
       method: 'POST',
       body: JSON.stringify({ recipe: recipe }),
       headers: { 'Content-Type': 'application/json' }
@@ -23,7 +23,7 @@ export const createRecipe = recipe => {
 
 export const deleteRecipe = (id, history) => {
   return dispatch => {
-    fetch(`http://localhost:3001/recipes/${id}`, {
+    fetch(`https://powerful-savannah-59386.herokuapp.com/recipes/${id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' }
     })
