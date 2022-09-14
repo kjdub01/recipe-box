@@ -1,3 +1,8 @@
 task :start do
-  exec 'foreman start -p 3000'
+  task :developmebt do 
+    exec 'heroku local -f Procfile.dev'
+  end
 end
+
+desc 'Start Development Server'
+task :start => 'start:development'
