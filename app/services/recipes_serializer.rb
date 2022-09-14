@@ -11,6 +11,7 @@ class RecipesSerializer
             only: [:id, :name]}
         },
         except: [:created_at, :updated_at]
+      }
   
       @recipes.to_json(options)
     end
