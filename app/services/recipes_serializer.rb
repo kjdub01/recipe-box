@@ -1,7 +1,7 @@
 class RecipesSerializer
 
     def initialize(recipes_object)
-      @recipes = recipe_object
+      @recipes = recipes_object
     end
   
     def to_serialized_json
