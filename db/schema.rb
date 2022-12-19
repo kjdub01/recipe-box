@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_211623) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_12_14_224638) do
   create_table "comments", force: :cascade do |t|
     t.string "author"
     t.text "content"
-    t.bigint "recipe_id"
+    t.integer "recipe_id"
     t.index ["recipe_id"], name: "index_comments_on_recipe_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.integer "recipe_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
   end
 
@@ -32,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_09_01_211623) do
     t.string "img"
     t.text "description"
     t.text "directions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
 end
